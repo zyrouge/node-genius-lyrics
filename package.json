@@ -1,0 +1,34 @@
+{
+  "name": "genius-lyrics",
+  "version": "1.0.2",
+  "description": "Fetches Lyrics from Genius. Made by ZYROUGE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zyrouge/genius-lyrics.git"
+  },
+  "bugs": {
+    "url": "http://github.com/zyrouge/genius-lyrics/issues"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "keywords": [
+    "lyrics",
+    "genius",
+    "genius-lyrics",
+    "lyrics-api",
+    "discord-lyrics",
+    "lyrics-genius",
+    "genius-parser"
+  ],
+  "author": "ZYROUGE",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "node-fetch": "^2.6.0"
+  }
+}
