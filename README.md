@@ -14,6 +14,8 @@
 * [Getting Lyrics with the URL](#Getting-Lyrics-with-the-URL)
 * [Get Genius Song ID](#Get-Genius-Song-ID)
 * [Full Code](#Full-Code)
+* [Getting all the Song Info](#Getting-all-the-Song-Info)
+* [Fetching from API](#Fetching-from-API)
 * [Need Help?](#Need-Help)
 
 ## Installing
@@ -83,10 +85,35 @@ const lyricsJSON = await Genius.getLyrics(url);
 const lyrics = lyricsJSON.lyrics;
 
 console.log(lyrics);
+```
+
+## Getting all the Song Info
+
+```js
+const genius = require("genius-lyrics");
+const Genius = new genius.Client('your-genius-token-here');
+const search = await Genius.findTrack('song-name');
+const all = await Genius.getAll(search);
+
+console.log(all);
 
 ```
 
 **Note:** It needs a Async Function to Work or you'll be stuck with Promise returns.
+
+## Fetching from API
+
+This is completely Optional Feature.
+
+```js
+const genius = require("genius-lyrics");
+const Genius = new genius.Client('your-genius-token-here');
+const custom = await Genius.request(`the-genius-endpoint-with-queries?q=your-queries`);
+
+console.log(custom);
+```
+
+Read the [Genius Docs](https://docs.genius.com/) for the Endpoints.
 
 ## Need Help
 
