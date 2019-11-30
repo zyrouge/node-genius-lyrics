@@ -1,8 +1,16 @@
 # Genius Lyrics
 
-### Created by ZYROUGE
+###### Made by ZYROUGE
+
+<center>
+
+[![Genius Lyrics by ZYROUGE](https://cdn.glitch.com/11b29f21-918a-49bd-83fa-985f9d7e114e%2Fbanner.png?v=1575086917366)](https://zyrouge.tech/)
+
+<br>
 
 [![NPM](https://nodei.co/npm/genius-lyrics.png)](https://nodei.co/npm/genius-lyrics/)
+
+</center>
 
 ## Table of Contents
 

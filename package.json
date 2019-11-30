@@ -1,6 +1,6 @@
 {
   "name": "genius-lyrics",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Fetches Lyrics from Genius. Made by ZYROUGE",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git://github.com/zyrouge/genius-lyrics.git"
   },
   "bugs": {
-    "url": "http://github.com/zyrouge/genius-lyrics/issues"
+    "url": "https://zyrouge.tech"
   },
   "engines": {
     "node": "*"
