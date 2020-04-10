@@ -21,6 +21,9 @@
 * [Getting Genius URL](#Getting-Genius-URL)
 * [Getting Lyrics with the URL](#Getting-Lyrics-with-the-URL)
 * [Get Genius Song ID](#Get-Genius-Song-ID)
+* [Get Genius Song by ID](#Get-Genius-Song-by-ID)
+* [Get Genius Artist by ID](#Get-Genius-Artist-by-ID)
+* [Get Genius Artist Songs by ID](#Get-Genius-Artist-Songs-by-ID)
 * [Full Code](#Full-Code)
 * [Getting all the Song Info](#Getting-all-the-Song-Info)
 * [Fetching from API](#Fetching-from-API)
@@ -82,6 +85,24 @@ const lyrics = lyricsJSON.lyrics;
 const id = await Genius.getId(search);
 ```
 
+## Get Genius Song by ID
+
+```js
+const id = await Genius.findTrackByID(id);
+```
+
+## Get Genius Artist by ID
+
+```js
+const id = await Genius.findArtistByID(id);
+```
+
+## Get Genius Artist Songs by ID
+
+```js
+const id = await Genius.findArtistSongsByID(id, 20 /* Results per page */, 2 /* Page Number*/);
+```
+
 ## Full Code
 
 ```js
@@ -104,7 +125,6 @@ const search = await Genius.findTrack('song-name');
 const all = await Genius.getAll(search);
 
 console.log(all);
-
 ```
 
 **Note:** It needs a Async Function to Work or you'll be stuck with Promise returns.
