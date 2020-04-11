@@ -1,7 +1,7 @@
 # Genius Lyrics
 
 <p align="center">
-  <img width="40%" src="https://cdn.glitch.com/11b29f21-918a-49bd-83fa-985f9d7e114e%2Fbanner.png?v=1575086917366"><br><br>
+  <img width="90%" src="https://cdn.glitch.com/11b29f21-918a-49bd-83fa-985f9d7e114e%2Fbanner.png?v=1575086917366"><br><br>
   <img src="https://nodei.co/npm/genius-lyrics.png">
 </p>
 
