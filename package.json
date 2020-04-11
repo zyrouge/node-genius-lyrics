@@ -1,12 +1,12 @@
 {
   "name": "genius-lyrics",
-  "version": "1.0.9",
-  "description": "Fetches Lyrics from Genius. Made by ZYROUGE",
+  "version": "2.0.0",
+  "description": "Fetches Lyrics from Genius at Ease.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://zyrouge.tech",
+  "homepage": "https://zyrouge.gq",
   "repository": {
     "type": "git",
     "url": "git://github.com/zyrouge/genius-lyrics.git"

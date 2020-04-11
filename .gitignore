@@ -6,3 +6,4 @@ package-lock.json
 private-test.js
 assets
 .nyc_output
+test
