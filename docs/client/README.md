@@ -11,6 +11,8 @@ const Genius = new genius('your-genius-token');
 ```
 Visit [Genius Developers Page](https://genius.com/developers) for a Token
 
+!> Invalid/Fake Token will result in unexpected errors
+
 ---
 
 #### Properties
@@ -66,7 +68,7 @@ Fetches the Endpoint
 
 Parameter | Type | Description
 ----------|------|------------
-`endpoint` | string | Fetches using *node-fetch*. Refer [this](https://docs.genius.com/)
+`endpoint` | [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | Fetches using *node-fetch*. Refer [this](https://docs.genius.com/)
 
 Returns: [Promise { pending }](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 

@@ -17,8 +17,8 @@ Searches the Song in Genius API
 
 Parameter | Type | Description
 ----------|------|------------
-`song` | string | Search terms
-`options` | [trackOptions]() | Extra Options for convenience
+`song` | [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | Search terms
+`options` | [trackOptions](options/tracks) | Extra Options for convenience
 
 Returns: [Promise](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise) { [Tracks](/classes/tracks) }
 

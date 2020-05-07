@@ -17,7 +17,7 @@ Usage: `.random()`
 
 Gives a Random Track from Tracks.
 
-Returns: `<Track>`
+Returns: [track](classes/track.md)
 
 Example:
 ```js
@@ -35,7 +35,7 @@ Usage: `.size`
 
 Number of Tracks in Tracks.
 
-Returns: `number`
+Returns: [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) 
 
 Example:
 ```js

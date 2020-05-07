@@ -27,11 +27,11 @@ Usage: `.songs(options)`
 
 Parameter | Type | Description
 ----------|------|------------
-`options` | [artistSongOptions](https://github.com/zyrouge/genius-lyrics/wiki/Options-(Artist-Songs)) | Artist Song Options
+`options` | [artistSongOptions](options/artist-songs) | Artist Song Options
 
 Returns an Array of Songs by the Artist.
 
-Returns: `Promise {<Tracks>}`
+Returns: [Promise](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise) { [tracks](classes/tracks) }
 
 Example:
 ```js
@@ -50,7 +50,7 @@ Usage: `.name`
 
 Represents Name of the Artist.
 
-Returns: `string`
+Returns: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 ### id
 
@@ -58,7 +58,7 @@ Usage: `.id`
 
 Represents ID of a Artist.
 
-Returns: `string | number`
+Returns: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
 ### url
 
@@ -66,7 +66,7 @@ Usage: `.url`
 
 Represents Genius URL of a Artist.
 
-Returns: `string`
+Returns: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 ### thumbnail
 
@@ -74,7 +74,7 @@ Usage: `.thumbnail`
 
 Represents Thumbnail(png) URL of a Artist.
 
-Returns: `string`
+Returns: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 ### image
 
@@ -82,7 +82,7 @@ Usage: `.image`
 
 Represents Image(png) URL of a Artist.
 
-Returns: `string`
+Returns: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 ### nicknames
 
@@ -90,7 +90,7 @@ Usage: `.nicknames`
 
 Represents Nicknames of a Artist.
 
-Returns: `array`
+Returns: [array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 ### iq
 
@@ -98,7 +98,7 @@ Usage: `.iq`
 
 Represents IQ of a Artist.
 
-Returns: `string | number`
+Returns: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
 ### socialmedia
 
@@ -122,7 +122,7 @@ Usage: `.user`
 
 Represents the User object of a Artist.
 
-Returns: `object`
+Returns: [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
 ### raw
 
@@ -130,4 +130,4 @@ Usage: `.raw`
 
 Represents Raw Response from Genius.
 
-Returns: `object`
+Returns: [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
