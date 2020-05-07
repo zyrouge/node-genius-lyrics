@@ -5,7 +5,7 @@
   <img src="https://nodei.co/npm/genius-lyrics.png">
 </p>
 
-# [Documentation](https:/genius-lyrics.zyrouge.gq)
+# [Documentation](https://genius-lyrics.zyrouge.gq)
 
 ## Need Help?
 
