@@ -5,3 +5,4 @@
 * [Options](/options/)
 * [Examples](/examples/)
 * [NPM](https://npmjs.com/genius-lyrics)
+* [Discord](https://zyrouge.gq/discord)
