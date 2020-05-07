@@ -1,0 +1,7 @@
+* [Home](/)
+* [Client](/client/)
+* [Classes](/classes/)
+* [Objects](/objects/)
+* [Options](/options/)
+* [Examples](/examples/)
+* [NPM](https://npmjs.com/genius-lyrics)
