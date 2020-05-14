@@ -6,4 +6,3 @@ package-lock.json
 /private-tests
 assets
 .nyc_output
-test
