@@ -4,7 +4,8 @@ coverage
 .idea
 npm-debug.log
 package-lock.json
-private-test.js
+/private-tests
 assets
 .nyc_output
 test
+/lib

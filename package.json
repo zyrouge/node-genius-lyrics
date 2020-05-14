@@ -1,12 +1,13 @@
 {
   "name": "genius-lyrics",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Fetches Lyrics from Genius at Ease.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
-  "homepage": "https://zyrouge.gq",
+  "homepage": "https://genius-lyrics.zyrouge.gq/",
   "repository": {
     "type": "git",
     "url": "git://github.com/zyrouge/genius-lyrics.git"
@@ -29,7 +30,8 @@
   "author": "ZYROUGE",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "node-fetch": "^2.6.0"
+    "@types/cheerio": "^0.22.18",
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3"
   }
 }

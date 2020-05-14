@@ -10,7 +10,6 @@ Represents a Genius Artist.
 * [url](#url)
 * [thumbnail](#thumbnail)
 * [image](#image)
-* [nicknames](#nicknames)
 * [iq](#iq)
 * [socialmedia](#socialmedia)
 * [verified](#verified)
@@ -83,14 +82,6 @@ Usage: `.image`
 Represents Image(png) URL of a Artist.
 
 Returns: [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
-
-### nicknames
-
-Usage: `.nicknames`
-
-Represents Nicknames of a Artist.
-
-Returns: [array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 ### iq
 

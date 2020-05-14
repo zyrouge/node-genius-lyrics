@@ -1,4 +1,17 @@
 ## Creating an Actual Client
+### v3+
+#### Javascript
+```js
+const genius = require("genius-lyrics");
+const Genius = new genius.Client('your-genius-token');
+```
+#### Typescript
+```js
+import Genius from "genius-lyrics";
+const Genius = new genius.Client('your-genius-token');
+```
+
+### Below v3+
 * **Method 1**
 ```js
 const genius = require("genius-lyrics");
@@ -10,8 +23,6 @@ const genius = require("genius-lyrics");
 const Genius = new genius('your-genius-token');
 ```
 Visit [Genius Developers Page](https://genius.com/developers) for a Token
-
-!> Invalid/Fake Token will result in unexpected errors
 
 ---
 
