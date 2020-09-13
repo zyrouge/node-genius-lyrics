@@ -1,7 +1,7 @@
 {
   "name": "genius-lyrics",
   "version": "4.0.0",
-  "description": "",
+  "description": "Fetches Lyrics from Genius at Ease.",
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/zyrouge/genius-lyrics/issues"
   },
-  "homepage": "https://github.com/zyrouge/genius-lyrics#readme",
+  "homepage": "https://genius-lyrics.zyrouge.gq",
   "dependencies": {
     "axios": "^0.20.0",
     "node-html-parser": "^1.2.20"
@@ -29,5 +29,14 @@
     "jsdoc-skyceil": "^1.0.5",
     "jsdoc-to-markdown": "^6.0.1",
     "typescript": "^4.0.2"
-  }
+  },
+  "keywords": [
+    "lyrics",
+    "genius",
+    "genius-lyrics",
+    "lyrics-api",
+    "discord-lyrics",
+    "lyrics-genius",
+    "genius-parser"
+  ]
 }
