@@ -1,6 +1,6 @@
 ## Whats is this?
 
-Just a simple lyrics fetcher that uses from [Genius](https://genius.com) also has official API implementations.
+Just a simple lyrics fetcher that uses [Genius](https://genius.com). This also has official API implementations.
 
 ---
 
