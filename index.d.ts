@@ -1,15 +1,21 @@
+import * as Axios from "axios";
+
+export interface Config {
+    requestOptions: Axios.AxiosRequestConfig;
+}
+
 export class Client {
     key?: string;
     songs: SongsClient;
     artists: ArtistsClient;
 
-    constructor(key?: string);
+    constructor(key?: string, config?: Config);
 }
 
 export class SongsClient {
     key?: string;
 
-    constructor(key?: string);
+    constructor(key?: string, config?: Config);
 
     search(q: string): Promise<Song[]>;
     get(q: number): Promise<Song>;
@@ -18,7 +24,7 @@ export class SongsClient {
 export class ArtistsClient {
     key?: string;
 
-    constructor(key?: string);
+    constructor(key?: string, config?: Config);
 
     get(q: number): Promise<Artist>;
 }
@@ -39,7 +45,7 @@ export class Song {
     raw: any;
     key?: string;
 
-    constructor(res: any, key?: string, partial?: boolean);
+    constructor(res: any, key?: string, partial?: boolean, config?: Config);
 
     lyrics(removeChorus?: boolean): Promise<string>;
     fetch(): Promise<Song>;
@@ -64,7 +70,7 @@ export class Artist {
     raw: any;
     key?: string;
 
-    constructor(res: any, key?: string, partial?: boolean);
+    constructor(res: any, key?: string, partial?: boolean, config?: Config);
 
     songs(options?: {
         per_page?: number;
@@ -85,7 +91,7 @@ export class Album {
     partial: boolean;
     raw: any;
 
-    constructor(res: any, artist: Artist);
+    constructor(res: any, artist: Artist, config?: Config);
 }
 
 export const Constants: string;
