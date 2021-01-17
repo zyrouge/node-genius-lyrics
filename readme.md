@@ -12,7 +12,7 @@ npm install genius-lyrics
 
 ```js
 const Genius = require("genius-lyrics");
-const Client = Genius.Client("top-secret-optional-key");
+const Client = new Genius.Client("top-secret-optional-key");
 ```
 
 ## Links
@@ -29,14 +29,14 @@ const Client = Genius.Client("top-secret-optional-key");
 
 ```js
 const Genius = require("genius-lyrics");
-const Client = Genius.Client("top-secret-optional-key"); // Scrapes if no key is provided
+const Client = new Genius.Client("top-secret-optional-key"); // Scrapes if no key is provided
 ```
 
 **TypeScript**
 
 ```ts
 import Genius from "genius-lyrics";
-const Client = Genius.Client("top-secret-optional-key"); // Scrapes if no key is provided
+const Client = new Genius.Client("top-secret-optional-key"); // Scrapes if no key is provided
 ```
 
 ### Fetching a Song and Lyrics
