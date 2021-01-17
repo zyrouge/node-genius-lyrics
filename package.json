@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "node ./scripts/build && tsc",
+    "docs": "typedoc && node ./scripts/docs",
     "test": "npm run build && ts-node ./tests/simple.ts"
   },
   "repository": {

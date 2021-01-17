@@ -77,10 +77,12 @@
     "test"
   ],
   "typedocOptions": {
-    "name": "Keyvify Documentation",
-    "out": "./docs/src/.vuepress/public/docs",
-    "json": "./docs/src/.vuepress/public/docs/docs.json",
-    "theme": "./docs/typedoc-theme",
-    "mode": "file"
+    "name": "Genius-Lyrics Documentation",
+    "entryPoints": [
+      "lib/index.ts"
+    ],
+    "out": "./docs",
+    "json": "./docs/docs.json",
+    "theme": "./scripts/typedoc-theme"
   }
 }
