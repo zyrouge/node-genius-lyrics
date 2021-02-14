@@ -14,9 +14,14 @@ const test = async () => {
     console.log(firstSong);
     await wait(1000);
 
-    const lyrics = await firstSong.lyrics();
-    console.log(`\nLyrics of ${firstSong.title}:`);
-    console.log(lyrics);
+    const SongWID = await Client.songs.get(firstSong.id);
+    console.log("\nWith ID:");
+    console.log(SongWID);
+    await wait(1000);
+
+    const sidlyrics = await firstSong.lyrics();
+    console.log(`\nLyrics of ${SongWID.title}:`);
+    console.log(sidlyrics);
     await wait(1000);
 
     const artist = firstSong.artist;
