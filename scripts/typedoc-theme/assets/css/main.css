@@ -1716,7 +1716,7 @@ pre code span {
     padding: 20px 20px 0 0;
     max-width: 450px;
     visibility: hidden;
-    background-color: #fdfdfd;
+    background-color: #212121;
     transform: translate(100%, 0);
   }
   html.default .col-menu > *:last-child {
@@ -2308,10 +2308,10 @@ footer .tsd-legend {
 }
 #tsd-search .results li {
   padding: 0 10px;
-  background-color: #fdfdfd;
+  background-color: #212121;
 }
 #tsd-search .results li:nth-child(even) {
-  background-color: #fdfdfd;
+  background-color: #212121;
 }
 #tsd-search .results li:last-child {
   border-bottom-left-radius: 6px;
