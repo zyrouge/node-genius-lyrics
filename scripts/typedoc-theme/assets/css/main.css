@@ -2620,7 +2620,7 @@ input[type="checkbox"]:checked + .tsd-widget:before {
   opacity: 0.8;
 }
 .tsd-select.active .tsd-select-list {
-  color: #212121;
+  color: #fdfdfd;
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
