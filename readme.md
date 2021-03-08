@@ -1,6 +1,8 @@
 <h1 align="center">Genius Lyrics 🎵</h1>
 
 [![Node.js CI](https://github.com/zyrouge/genius-lyrics/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/zyrouge/genius-lyrics/actions/workflows/ci.yml)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fzyrouge%2Fgenius-lyrics.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fzyrouge%2Fgenius-lyrics?ref=badge_shield)
+[![Documentation](https://github.com/zyrouge/genius-lyrics/actions/workflows/docs.yml/badge.svg)](https://github.com/zyrouge/genius-lyrics/actions/workflows/docs.yml)
 
 ## 🤔 Whats is this?
 
