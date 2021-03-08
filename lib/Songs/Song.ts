@@ -74,12 +74,10 @@ export default class Song {
     async fetch() {
         if (!this.key) throw new Error(Constants.REQUIRES_KEY);
         try {
-            const { data } = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/songs/${this.id}`, {
-                ...this.config.requestOptions,
-                headers: {
-                    "Authorization": `Bearer ${this.key}`
-                }
-            });
+            const config = this.config.requestOptions || {};
+            if (!config.headers) config.headers = {};
+            config.headers["Authorization"] = `Bearer ${this.key}`;
+            const { data } = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/songs/${this.id}`, config);
             if (data.error) throw new Error(Constants.ERR_W_MSG(data.error, data.error_description));
             if (!data || !data.meta || data.meta.status == 404) throw new Error(Constants.NO_RESULT);
             if (data.meta.status !== 200) throw new Error(Constants.ERR_W_MSG(data.meta.status, data.meta.message));

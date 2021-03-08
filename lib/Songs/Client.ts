@@ -29,12 +29,10 @@ export default class SongsClient {
             const term = encodeURIComponent(q);
             let result: any[] = [];
             if (this.key) {
-                const res = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/search?q=${term}`, {
-                    ...this.config.requestOptions,
-                    headers: {
-                        'Authorization': `Bearer ${this.key}`
-                    }
-                });
+                const config = this.config.requestOptions || {};
+                if (!config.headers) config.headers = {};
+                config.headers["Authorization"] = `Bearer ${this.key}`;
+                const res = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/search?q=${term}`, config);
 
                 if (res.data.error) throw new Error(Constants.ERR_W_MSG(res.data.error, res.data.error_description));
                 if (!res.data || !res.data.meta || res.data.meta.status == 404) throw new Error(Constants.NO_RESULT);
@@ -72,12 +70,10 @@ export default class SongsClient {
         if (!this.key) throw new Error(Constants.REQUIRES_KEY);
 
         try {
-            const { data } = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/songs/${q}`, {
-                ...this.config.requestOptions,
-                headers: {
-                    'Authorization': `Bearer ${this.key}`
-                }
-            });
+            const config = this.config.requestOptions || {};
+            if (!config.headers) config.headers = {};
+            config.headers["Authorization"] = `Bearer ${this.key}`;
+            const { data } = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/songs/${q}`, config);
             if (data.error) throw new Error(Constants.ERR_W_MSG(data.error, data.error_description));
             if (!data || !data.meta) throw new Error(Constants.NO_RESULT);
             if (data.meta.status == 404) throw new Error(Constants.NO_RESULT);
