@@ -1,0 +1,2990 @@
+{
+	"id": 0,
+	"name": "Genius-Lyrics Documentation",
+	"kind": 0,
+	"kindString": "Project",
+	"flags": {},
+	"children": [
+		{
+			"id": 131,
+			"name": "Album",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 132,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 133,
+							"name": "new Album",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 134,
+									"name": "res",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 135,
+									"name": "artist",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 97,
+										"name": "default"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 131,
+								"name": "default"
+							}
+						}
+					]
+				},
+				{
+					"id": 142,
+					"name": "artist",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Albums/Album.ts",
+							"line": 11,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 97,
+						"name": "default"
+					}
+				},
+				{
+					"id": 141,
+					"name": "endpoint",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Albums/Album.ts",
+							"line": 10,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 138,
+					"name": "id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Albums/Album.ts",
+							"line": 7,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 139,
+					"name": "image",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Albums/Album.ts",
+							"line": 8,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 136,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Albums/Album.ts",
+							"line": 5,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 143,
+					"name": "partial",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Albums/Album.ts",
+							"line": 12,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 144,
+					"name": "raw",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Albums/Album.ts",
+							"line": 13,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 137,
+					"name": "title",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Albums/Album.ts",
+							"line": 6,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 140,
+					"name": "url",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Albums/Album.ts",
+							"line": 9,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						132
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						142,
+						141,
+						138,
+						139,
+						136,
+						143,
+						144,
+						137,
+						140
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "Albums/Album.ts",
+					"line": 4,
+					"character": 26
+				}
+			]
+		},
+		{
+			"id": 97,
+			"name": "Artist",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 98,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 99,
+							"name": "new Artist",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 100,
+									"name": "res",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 101,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 102,
+									"name": "partial",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									},
+									"defaultValue": "false"
+								},
+								{
+									"id": 103,
+									"name": "config",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 161,
+										"name": "Config"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 97,
+								"name": "default"
+							}
+						}
+					]
+				},
+				{
+					"id": 121,
+					"name": "config",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true
+					},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 24,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 161,
+						"name": "Config"
+					}
+				},
+				{
+					"id": 105,
+					"name": "id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 8,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 108,
+					"name": "image",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 11,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 109,
+					"name": "iq",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 12,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 120,
+					"name": "key",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 23,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 104,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 7,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 114,
+					"name": "partial",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 17,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 119,
+					"name": "raw",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 22,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 115,
+					"name": "socialmedia",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 18,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 116,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 117,
+									"name": "facebook",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "Artists/Artist.ts",
+											"line": 19,
+											"character": 16
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 118,
+									"name": "twitter",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "Artists/Artist.ts",
+											"line": 20,
+											"character": 15
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										117,
+										118
+									]
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 107,
+					"name": "thumbnail",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 10,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 106,
+					"name": "url",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 9,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 110,
+					"name": "verified",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 13,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 111,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 113,
+									"name": "meme",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "Artists/Artist.ts",
+											"line": 15,
+											"character": 12
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 112,
+									"name": "normal",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "Artists/Artist.ts",
+											"line": 14,
+											"character": 14
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										113,
+										112
+									]
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 129,
+					"name": "fetch",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 89,
+							"character": 15
+						}
+					],
+					"signatures": [
+						{
+							"id": 130,
+							"name": "fetch",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Fetches All Information about the Artist and updates all the existing Properties (Requires Key)",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "const NewArtist = await Artist.fetch();\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 97,
+										"name": "default"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				},
+				{
+					"id": 122,
+					"name": "songs",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Artist.ts",
+							"line": 55,
+							"character": 15
+						}
+					],
+					"signatures": [
+						{
+							"id": 123,
+							"name": "songs",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Fetches the songs of the Artist (Requires Key)",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "const Songs = await Artist.songs();\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 124,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 125,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"children": [
+												{
+													"id": 127,
+													"name": "page",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {
+														"isOptional": true
+													},
+													"sources": [
+														{
+															"fileName": "Artists/Artist.ts",
+															"line": 57,
+															"character": 12
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												},
+												{
+													"id": 128,
+													"name": "per_page",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {
+														"isOptional": true
+													},
+													"sources": [
+														{
+															"fileName": "Artists/Artist.ts",
+															"line": 58,
+															"character": 16
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												},
+												{
+													"id": 126,
+													"name": "sort",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {
+														"isOptional": true
+													},
+													"sources": [
+														{
+															"fileName": "Artists/Artist.ts",
+															"line": 56,
+															"character": 12
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"groups": [
+												{
+													"title": "Properties",
+													"kind": 1024,
+													"children": [
+														127,
+														128,
+														126
+													]
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						98
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						121,
+						105,
+						108,
+						109,
+						120,
+						104,
+						114,
+						119,
+						115,
+						107,
+						106,
+						110
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						129,
+						122
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "Artists/Artist.ts",
+					"line": 6,
+					"character": 27
+				}
+			]
+		},
+		{
+			"id": 60,
+			"name": "ArtistsClient",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 61,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 62,
+							"name": "new ArtistsClient",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"comment": {
+								"tags": [
+									{
+										"tag": "example",
+										"text": "const ArtistsClient = await Genius.Artist.Client(key);\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 63,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 64,
+									"name": "config",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 161,
+										"name": "Config"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 60,
+								"name": "default"
+							}
+						}
+					]
+				},
+				{
+					"id": 66,
+					"name": "config",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true
+					},
+					"sources": [
+						{
+							"fileName": "Artists/Client.ts",
+							"line": 8,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 161,
+						"name": "Config"
+					}
+				},
+				{
+					"id": 65,
+					"name": "key",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "Artists/Client.ts",
+							"line": 7,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 67,
+					"name": "get",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Artists/Client.ts",
+							"line": 25,
+							"character": 13
+						}
+					],
+					"signatures": [
+						{
+							"id": 68,
+							"name": "get",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Fetches the Artist using the provided ID (Requires Key)",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "const Artist = await ArtistsClient.get(456537);\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 69,
+									"name": "q",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 97,
+										"name": "default"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						61
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						66,
+						65
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						67
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "Artists/Client.ts",
+					"line": 6,
+					"character": 34
+				}
+			]
+		},
+		{
+			"id": 33,
+			"name": "Client",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 34,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 35,
+							"name": "new Client",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 36,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 37,
+									"name": "config",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 161,
+										"name": "Config"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 33,
+								"name": "default"
+							}
+						}
+					]
+				},
+				{
+					"id": 39,
+					"name": "config",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true
+					},
+					"sources": [
+						{
+							"fileName": "Client.ts",
+							"line": 8,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 161,
+						"name": "Config"
+					}
+				},
+				{
+					"id": 38,
+					"name": "key",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "Client.ts",
+							"line": 7,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 45,
+					"name": "artists",
+					"kind": 262144,
+					"kindString": "Accessor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Client.ts",
+							"line": 26,
+							"character": 15
+						}
+					],
+					"getSignature": [
+						{
+							"id": 46,
+							"name": "artists",
+							"kind": 524288,
+							"kindString": "Get signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 60,
+								"name": "default"
+							}
+						}
+					]
+				},
+				{
+					"id": 43,
+					"name": "songs",
+					"kind": 262144,
+					"kindString": "Accessor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Client.ts",
+							"line": 22,
+							"character": 13
+						}
+					],
+					"getSignature": [
+						{
+							"id": 44,
+							"name": "songs",
+							"kind": 524288,
+							"kindString": "Get signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 47,
+								"name": "default"
+							}
+						}
+					]
+				},
+				{
+					"id": 40,
+					"name": "setKey",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Client.ts",
+							"line": 18,
+							"character": 10
+						}
+					],
+					"signatures": [
+						{
+							"id": 41,
+							"name": "setKey",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 42,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											},
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						34
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						39,
+						38
+					]
+				},
+				{
+					"title": "Accessors",
+					"kind": 262144,
+					"children": [
+						45,
+						43
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						40
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "Client.ts",
+					"line": 6,
+					"character": 27
+				}
+			]
+		},
+		{
+			"id": 70,
+			"name": "Song",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 71,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 72,
+							"name": "new Song",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 73,
+									"name": "res",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 74,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 75,
+									"name": "partial",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									},
+									"defaultValue": "false"
+								},
+								{
+									"id": 76,
+									"name": "config",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 161,
+										"name": "Config"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 70,
+								"name": "default"
+							}
+						}
+					]
+				},
+				{
+					"id": 87,
+					"name": "album",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 19,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 131,
+						"name": "default"
+					}
+				},
+				{
+					"id": 85,
+					"name": "artist",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 17,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 97,
+						"name": "default"
+					}
+				},
+				{
+					"id": 91,
+					"name": "config",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true
+					},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 23,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 161,
+						"name": "Config"
+					}
+				},
+				{
+					"id": 84,
+					"name": "endpoint",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 16,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 79,
+					"name": "featuredTitle",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 11,
+							"character": 17
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 78,
+					"name": "fullTitle",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 10,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 80,
+					"name": "id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 12,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 82,
+					"name": "image",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 14,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 90,
+					"name": "key",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 22,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 86,
+					"name": "partial",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 18,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 89,
+					"name": "raw",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 21,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 88,
+					"name": "releasedAt",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 20,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Date"
+					}
+				},
+				{
+					"id": 81,
+					"name": "thumbnail",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 13,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 77,
+					"name": "title",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 9,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 83,
+					"name": "url",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 15,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 95,
+					"name": "fetch",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 74,
+							"character": 15
+						}
+					],
+					"signatures": [
+						{
+							"id": 96,
+							"name": "fetch",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Fetches All Information about the Track and updates all the existing Properties (Requires Key)",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "const NewSong = await Song.fetch();\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 70,
+										"name": "default"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				},
+				{
+					"id": 92,
+					"name": "lyrics",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 51,
+							"character": 16
+						}
+					],
+					"signatures": [
+						{
+							"id": 93,
+							"name": "lyrics",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Fetches Lyrics of the Track",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "const Lyrics = await Song.lyrics(true);\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 94,
+									"name": "removeChorus",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									},
+									"defaultValue": "false"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						71
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						87,
+						85,
+						91,
+						84,
+						79,
+						78,
+						80,
+						82,
+						90,
+						86,
+						89,
+						88,
+						81,
+						77,
+						83
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						95,
+						92
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "Songs/Song.ts",
+					"line": 8,
+					"character": 25
+				}
+			]
+		},
+		{
+			"id": 47,
+			"name": "SongsClient",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 48,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 49,
+							"name": "new SongsClient",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"comment": {
+								"tags": [
+									{
+										"tag": "example",
+										"text": "const SongsClient = new Genius.Songs.Client(key);\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 50,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 51,
+									"name": "config",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 161,
+										"name": "Config"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 47,
+								"name": "default"
+							}
+						}
+					]
+				},
+				{
+					"id": 53,
+					"name": "config",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true
+					},
+					"sources": [
+						{
+							"fileName": "Songs/Client.ts",
+							"line": 8,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 161,
+						"name": "Config"
+					}
+				},
+				{
+					"id": 52,
+					"name": "key",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true,
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "Songs/Client.ts",
+							"line": 7,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 57,
+					"name": "get",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Client.ts",
+							"line": 69,
+							"character": 13
+						}
+					],
+					"signatures": [
+						{
+							"id": 58,
+							"name": "get",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Fetches the Song using the provided ID (Requires Key)",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "const Song = await SongsClient.get(3276244);\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 59,
+									"name": "q",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 70,
+										"name": "default"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				},
+				{
+					"id": 54,
+					"name": "search",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Client.ts",
+							"line": 25,
+							"character": 16
+						}
+					],
+					"signatures": [
+						{
+							"id": 55,
+							"name": "search",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Searches for songs for the provided query (Key is optional)",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "const SearchResults = await SongsClient.search(\"faded\");\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 56,
+									"name": "q",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 70,
+											"name": "default"
+										}
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						48
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						53,
+						52
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						57,
+						54
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "Songs/Client.ts",
+					"line": 6,
+					"character": 32
+				}
+			]
+		},
+		{
+			"id": 161,
+			"name": "Config",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {},
+			"children": [
+				{
+					"id": 163,
+					"name": "origin",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "Constants.ts",
+							"line": 5,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 164,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 165,
+									"name": "api",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "Constants.ts",
+											"line": 6,
+											"character": 11
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 166,
+									"name": "url",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "Constants.ts",
+											"line": 7,
+											"character": 11
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										165,
+										166
+									]
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 162,
+					"name": "requestOptions",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "Constants.ts",
+							"line": 4,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "AxiosRequestConfig"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						163,
+						162
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "Constants.ts",
+					"line": 3,
+					"character": 23
+				}
+			]
+		},
+		{
+			"id": 167,
+			"name": "Utils",
+			"kind": 1024,
+			"kindString": "Property",
+			"flags": {},
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 168,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 169,
+							"name": "checkConfig",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 170,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 171,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 172,
+													"name": "config",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "any"
+													}
+												}
+											],
+											"type": {
+												"type": "predicate",
+												"name": "config",
+												"asserts": false,
+												"targetType": {
+													"type": "reference",
+													"id": 161,
+													"name": "Config"
+												}
+											}
+										}
+									]
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								169
+							]
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 2,
+			"name": "default",
+			"kind": 1024,
+			"kindString": "Property",
+			"flags": {},
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 3,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 9,
+							"name": "Album",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 131,
+									"name": "default"
+								}
+							}
+						},
+						{
+							"id": 8,
+							"name": "Artist",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 97,
+									"name": "default"
+								}
+							}
+						},
+						{
+							"id": 6,
+							"name": "ArtistsClient",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 60,
+									"name": "default"
+								}
+							}
+						},
+						{
+							"id": 4,
+							"name": "Client",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 33,
+									"name": "default"
+								}
+							}
+						},
+						{
+							"id": 10,
+							"name": "Constants",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 11,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 14,
+											"name": "ARTIST_SORTS",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 12,
+											"name": "BASE_URL",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "\"https://api.genius.com\""
+										},
+										{
+											"id": 15,
+											"name": "DEF_USER_AGENT",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36\""
+										},
+										{
+											"id": 21,
+											"name": "ERR_W_MSG",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 22,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {},
+													"signatures": [
+														{
+															"id": 23,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {},
+															"parameters": [
+																{
+																	"id": 24,
+																	"name": "err",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {},
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "any"
+																	}
+																},
+																{
+																	"id": 25,
+																	"name": "msg",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {},
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "any"
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													]
+												}
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18,
+											"name": "INV_CONFIG_OBJ",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "\"Invalid config\""
+										},
+										{
+											"id": 17,
+											"name": "INV_RES_OBJ",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "\"Invalid response object\""
+										},
+										{
+											"id": 19,
+											"name": "INV_TOKEN",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "\"Invalid Genius Token\""
+										},
+										{
+											"id": 20,
+											"name": "NO_RESULT",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "\"No result was found\""
+										},
+										{
+											"id": 16,
+											"name": "REQUIRES_KEY",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "\"This action requires a valid Genius Token\""
+										},
+										{
+											"id": 13,
+											"name": "UN_BASE_URL",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "\"https://genius.com/api\""
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												14,
+												12,
+												15,
+												21,
+												18,
+												17,
+												19,
+												20,
+												16,
+												13
+											]
+										}
+									]
+								}
+							}
+						},
+						{
+							"id": 7,
+							"name": "Song",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 70,
+									"name": "default"
+								}
+							}
+						},
+						{
+							"id": 5,
+							"name": "SongsClient",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 47,
+									"name": "default"
+								}
+							}
+						},
+						{
+							"id": 26,
+							"name": "Utils",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 27,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 28,
+											"name": "checkConfig",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 29,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {},
+													"signatures": [
+														{
+															"id": 30,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {},
+															"parameters": [
+																{
+																	"id": 31,
+																	"name": "config",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {},
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "any"
+																	}
+																}
+															],
+															"type": {
+																"type": "predicate",
+																"name": "config",
+																"asserts": false,
+																"targetType": {
+																	"type": "reference",
+																	"id": 161,
+																	"name": "Config"
+																}
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												28
+											]
+										}
+									]
+								}
+							}
+						},
+						{
+							"id": 32,
+							"name": "Version",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								9,
+								8,
+								6,
+								4,
+								10,
+								7,
+								5,
+								26,
+								32
+							]
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 145,
+			"name": "Constants",
+			"kind": 32,
+			"kindString": "Variable",
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "Constants.ts",
+					"line": 11,
+					"character": 22
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 146,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 149,
+							"name": "ARTIST_SORTS",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							},
+							"defaultValue": "..."
+						},
+						{
+							"id": 147,
+							"name": "BASE_URL",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "\"https://api.genius.com\""
+						},
+						{
+							"id": 150,
+							"name": "DEF_USER_AGENT",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36\""
+						},
+						{
+							"id": 156,
+							"name": "ERR_W_MSG",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 157,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 158,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 159,
+													"name": "err",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "any"
+													}
+												},
+												{
+													"id": 160,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "any"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									]
+								}
+							},
+							"defaultValue": "..."
+						},
+						{
+							"id": 153,
+							"name": "INV_CONFIG_OBJ",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "\"Invalid config\""
+						},
+						{
+							"id": 152,
+							"name": "INV_RES_OBJ",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "\"Invalid response object\""
+						},
+						{
+							"id": 154,
+							"name": "INV_TOKEN",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "\"Invalid Genius Token\""
+						},
+						{
+							"id": 155,
+							"name": "NO_RESULT",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "\"No result was found\""
+						},
+						{
+							"id": 151,
+							"name": "REQUIRES_KEY",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "\"This action requires a valid Genius Token\""
+						},
+						{
+							"id": 148,
+							"name": "UN_BASE_URL",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "\"https://genius.com/api\""
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								149,
+								147,
+								150,
+								156,
+								153,
+								152,
+								154,
+								155,
+								151,
+								148
+							]
+						}
+					]
+				}
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 1,
+			"name": "Version",
+			"kind": 32,
+			"kindString": "Variable",
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 10,
+					"character": 13
+				}
+			],
+			"type": {
+				"type": "intrinsic",
+				"name": "string"
+			},
+			"defaultValue": "..."
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"kind": 128,
+			"children": [
+				131,
+				97,
+				60,
+				33,
+				70,
+				47
+			]
+		},
+		{
+			"title": "Interfaces",
+			"kind": 256,
+			"children": [
+				161
+			]
+		},
+		{
+			"title": "Properties",
+			"kind": 1024,
+			"children": [
+				167,
+				2
+			]
+		},
+		{
+			"title": "Variables",
+			"kind": 32,
+			"children": [
+				145,
+				1
+			]
+		}
+	],
+	"sources": [
+		{
+			"fileName": "index.ts",
+			"line": 1,
+			"character": 0
+		}
+	]
+}

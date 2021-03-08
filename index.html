@@ -1,0 +1,194 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Genius-Lyrics Documentation</title>
+	<meta name="description" content="Documentation for Genius-Lyrics Documentation">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">Genius-Lyrics Documentation</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>Genius-Lyrics Documentation</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 align="center">Genius Lyrics 🎵</h1>
+				<p><a href="https://github.com/zyrouge/genius-lyrics/actions/workflows/ci.yml"><img src="https://github.com/zyrouge/genius-lyrics/actions/workflows/ci.yml/badge.svg?branch=master" alt="Node.js CI"></a></p>
+				<a href="#🤔-whats-is-this" id="🤔-whats-is-this" style="color: inherit; text-decoration: none;">
+					<h2>🤔 Whats is this?</h2>
+				</a>
+				<p>Just a simple lyrics fetcher that uses <a href="https://genius.com">Genius</a>. This also has official API implementations.</p>
+				<a href="#💻-installation" id="💻-installation" style="color: inherit; text-decoration: none;">
+					<h2>💻 Installation</h2>
+				</a>
+				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> </span><span style="color: #001080">genius</span><span style="color: #000000">-</span><span style="color: #001080">lyrics</span>
+</code></pre>
+				<a href="#⚙️-usage" id="⚙️-usage" style="color: inherit; text-decoration: none;">
+					<h2>⚙️ Usage</h2>
+				</a>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">Genius</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;genius-lyrics&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">Client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">Genius</span><span style="color: #000000">.</span><span style="color: #795E26">Client</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;top-secret-optional-key&quot;</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#📎-links" id="📎-links" style="color: inherit; text-decoration: none;">
+					<h2>📎 Links</h2>
+				</a>
+				<ul>
+					<li><a href="https://genius-lyrics.zyrouge.gq">Documentation</a></li>
+					<li><a href="https://npmjs.com/genius-lyrics">NPM</a></li>
+					<li><a href="https://github.com/zyrouge/genius-lyrics">GitHub</a></li>
+				</ul>
+				<a href="#✏️-examples" id="✏️-examples" style="color: inherit; text-decoration: none;">
+					<h2>✏️ Examples</h2>
+				</a>
+				<a href="#requiring" id="requiring" style="color: inherit; text-decoration: none;">
+					<h3>Requiring</h3>
+				</a>
+				<p><strong>JavaScript</strong></p>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">Genius</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;genius-lyrics&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">Client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">Genius</span><span style="color: #000000">.</span><span style="color: #795E26">Client</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;top-secret-optional-key&quot;</span><span style="color: #000000">); </span><span style="color: #008000">// Scrapes if no key is provided</span>
+</code></pre>
+				<p><strong>TypeScript</strong></p>
+				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Genius</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;genius-lyrics&quot;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">Client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">Genius</span><span style="color: #000000">.</span><span style="color: #795E26">Client</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;top-secret-optional-key&quot;</span><span style="color: #000000">); </span><span style="color: #008000">// Scrapes if no key is provided</span>
+</code></pre>
+				<a href="#fetching-a-song-and-lyrics" id="fetching-a-song-and-lyrics" style="color: inherit; text-decoration: none;">
+					<h3>Fetching a Song and Lyrics</h3>
+				</a>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">searches</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">Client</span><span style="color: #000000">.</span><span style="color: #001080">songs</span><span style="color: #000000">.</span><span style="color: #795E26">search</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;faded&quot;</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// Pick first one</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">firstSong</span><span style="color: #000000"> = </span><span style="color: #001080">searches</span><span style="color: #000000">[</span><span style="color: #098658">0</span><span style="color: #000000">];</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;About the Song:</span><span style="color: #EE0000">\n</span><span style="color: #A31515">&quot;</span><span style="color: #000000">, </span><span style="color: #001080">firstSong</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;</span><span style="color: #EE0000">\n</span><span style="color: #A31515">&quot;</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// Ok lets get the lyrics</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">lyrics</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">firstSong</span><span style="color: #000000">.</span><span style="color: #795E26">lyrics</span><span style="color: #000000">();</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;Lyrics of the Song:</span><span style="color: #EE0000">\n</span><span style="color: #A31515">&quot;</span><span style="color: #000000">, </span><span style="color: #001080">lyrics</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;</span><span style="color: #EE0000">\n</span><span style="color: #A31515">&quot;</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#fetching-an-artist" id="fetching-an-artist" style="color: inherit; text-decoration: none;">
+					<h3>Fetching an Artist</h3>
+				</a>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">artist</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">Client</span><span style="color: #000000">.</span><span style="color: #001080">artists</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #098658">456537</span><span style="color: #000000">);</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;About the Artist:</span><span style="color: #EE0000">\n</span><span style="color: #A31515">&quot;</span><span style="color: #000000">, </span><span style="color: #001080">artist</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;</span><span style="color: #EE0000">\n</span><span style="color: #A31515">&quot;</span><span style="color: #000000">);</span>
+</code></pre>
+				<br>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/album.html" class="tsd-kind-icon">Album</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/artist.html" class="tsd-kind-icon">Artist</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/artistsclient.html" class="tsd-kind-icon">Artists<wbr>Client</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/client.html" class="tsd-kind-icon">Client</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/song.html" class="tsd-kind-icon">Song</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/songsclient.html" class="tsd-kind-icon">Songs<wbr>Client</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/config.html" class="tsd-kind-icon">Config</a>
+					</li>
+					<li class=" tsd-kind-property">
+						<a href="modules.html#utils" class="tsd-kind-icon">Utils</a>
+					</li>
+					<li class=" tsd-kind-property">
+						<a href="modules.html#default" class="tsd-kind-icon">default</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#constants" class="tsd-kind-icon">Constants</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#version" class="tsd-kind-icon">Version</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
