@@ -1,5 +1,7 @@
 <h1 align="center">Genius Lyrics 🎵</h1>
 
+[![Node.js CI](https://github.com/zyrouge/genius-lyrics/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/zyrouge/genius-lyrics/actions/workflows/ci.yml)
+
 ## 🤔 Whats is this?
 
 Just a simple lyrics fetcher that uses [Genius](https://genius.com). This also has official API implementations.
