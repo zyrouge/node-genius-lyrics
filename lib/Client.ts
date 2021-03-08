@@ -7,7 +7,7 @@ export default class Client {
     private key?: string;
     private config: Config;
 
-    constructor(key: string, config: Config = {}) {
+    constructor(key?: string, config: Config = {}) {
         if (key && typeof key !== "string") throw new Error(Constants.INV_TOKEN);
         if (!Utils.checkConfig(config)) throw new Error(Constants.INV_CONFIG_OBJ);
 
