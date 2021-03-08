@@ -1,27 +1,29 @@
-## Whats is this?
+<h1 align="center">Genius Lyrics 🎵</h1>
+
+## 🤔 Whats is this?
 
 Just a simple lyrics fetcher that uses [Genius](https://genius.com). This also has official API implementations.
 
-## Installation
+## 💻 Installation
 
 ```
 npm install genius-lyrics
 ```
 
-## Usage
+## ⚙️ Usage
 
 ```js
 const Genius = require("genius-lyrics");
 const Client = new Genius.Client("top-secret-optional-key");
 ```
 
-## Links
+## 📎 Links
 
 - [Documentation](https://genius-lyrics.zyrouge.gq)
 - [NPM](https://npmjs.com/genius-lyrics)
 - [GitHub](https://github.com/zyrouge/genius-lyrics)
 
-## Examples
+## ✏️ Examples
 
 ### Requiring
 
