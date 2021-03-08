@@ -24,8 +24,12 @@ jobs:
       - name: Building site...
         run: npm run docs
 
+      - name: Deleting gitignore
+        run: rm -rf .gitignore
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
+          allow_empty_commit: true
