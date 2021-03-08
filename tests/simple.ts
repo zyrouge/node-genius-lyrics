@@ -2,7 +2,7 @@ import Genius from "../dist";
 import util from "util";
 
 const Token = "GjZdsQku4iZ7k9QRw0v3g2PRBRe6zrAe3NzPLBqdA-fBEFC_u1DbxuFF5FZvSxPL";
-const timeout = 1000;
+const timeout = 2000;
 
 const Client = new Genius.Client(Token);
 const wait = util.promisify(setTimeout);
