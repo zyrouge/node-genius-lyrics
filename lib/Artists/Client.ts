@@ -29,6 +29,7 @@ export default class ArtistsClient {
         try {
             const config = this.config.requestOptions || {};
             if (!config.headers) config.headers = {};
+            if (!config.headers["User-Agent"]) config.headers["User-Agent"] = Constants.DEF_USER_AGENT;
             config.headers["Authorization"] = `Bearer ${this.key}`;
             const { data } = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/artists/${q}`, config);
             if (data.error) throw new Error(Constants.ERR_W_MSG(data.error, data.error_description));

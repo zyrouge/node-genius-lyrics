@@ -67,6 +67,7 @@ export default class Artist {
         try {
             const config = this.config.requestOptions || {};
             if (!config.headers) config.headers = {};
+            if (!config.headers["User-Agent"]) config.headers["User-Agent"] = Constants.DEF_USER_AGENT;
             config.headers["Authorization"] = `Bearer ${this.key}`;
             const { data } = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/artists/${this.id}/songs?page=${page}&per_page=${per_page}&sort=${sort}`, config);
             if (data.error) throw new Error(Constants.ERR_W_MSG(data.error, data.error_description));
@@ -91,6 +92,7 @@ export default class Artist {
         try {
             const config = this.config.requestOptions || {};
             if (!config.headers) config.headers = {};
+            if (!config.headers["User-Agent"]) config.headers["User-Agent"] = Constants.DEF_USER_AGENT;
             config.headers["Authorization"] = `Bearer ${this.key}`;
             const { data } = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/artists/${this.id}`, config);
             if (data.error) throw new Error(`Returned ${data.error} with message: ${data.error_description}`);

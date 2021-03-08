@@ -31,6 +31,7 @@ export default class SongsClient {
             if (this.key) {
                 const config = this.config.requestOptions || {};
                 if (!config.headers) config.headers = {};
+                if (!config.headers["User-Agent"]) config.headers["User-Agent"] = Constants.DEF_USER_AGENT;
                 config.headers["Authorization"] = `Bearer ${this.key}`;
                 const res = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/search?q=${term}`, config);
 
@@ -72,6 +73,7 @@ export default class SongsClient {
         try {
             const config = this.config.requestOptions || {};
             if (!config.headers) config.headers = {};
+            if (!config.headers["User-Agent"]) config.headers["User-Agent"] = Constants.DEF_USER_AGENT;
             config.headers["Authorization"] = `Bearer ${this.key}`;
             const { data } = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/songs/${q}`, config);
             if (data.error) throw new Error(Constants.ERR_W_MSG(data.error, data.error_description));
