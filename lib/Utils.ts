@@ -6,13 +6,13 @@ const checkConfig = (config: any): config is Config => {
         typeof config !== "object"
     ) return false;
 
-    if (config.requestOptions && config.requestOptions !== "object") return false;
+    if (config.requestOptions && typeof config.requestOptions !== "object") return false;
 
     if (config.origin) {
         if (
-            config.origin !== "object" ||
-            (config.origin.api && config.origin.api !== "string") ||
-            (config.origin.url && config.origin.url !== "string")
+            typeof config.origin !== "object" ||
+            (config.origin.api && typeof config.origin.api !== "string") ||
+            (config.origin.url && typeof config.origin.url !== "string")
         ) return false;
     }
 
