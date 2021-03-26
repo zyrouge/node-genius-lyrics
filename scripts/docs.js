@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const URL = "genius-lyrics.zyrouge.gq";
+const URL = "genius-lyrics.js.org";
 
 const start = async () => {
     const cnamedir = path.resolve(__dirname, "..", "docs", "CNAME");
