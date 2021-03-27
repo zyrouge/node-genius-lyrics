@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/zyrouge/genius-lyrics/issues"
   },
-  "homepage": "https://genius-lyrics.zyrouge.gq",
+  "homepage": "https://genius-lyrics.js.org",
   "dependencies": {
     "axios": "^0.21.1",
     "node-html-parser": "^3.0.4"

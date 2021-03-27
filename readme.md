@@ -23,7 +23,7 @@ const Client = new Genius.Client("top-secret-optional-key");
 
 ## 📎 Links
 
-- [Documentation](https://genius-lyrics.zyrouge.gq)
+- [Documentation](https://genius-lyrics.js.org/)
 - [NPM](https://npmjs.com/genius-lyrics)
 - [GitHub](https://github.com/zyrouge/genius-lyrics)
 
