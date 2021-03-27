@@ -1,6 +1,6 @@
 {
   "name": "genius-lyrics",
-  "version": "4.2.7",
+  "version": "4.2.8",
   "description": "Fetches Lyrics from Genius at Ease.",
   "main": "dist/index.js",
   "files": [
