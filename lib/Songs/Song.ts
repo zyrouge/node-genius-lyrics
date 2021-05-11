@@ -1,5 +1,5 @@
 import axios from "axios";
-import htmlparser from "node-html-parser";
+import cheerio from "cheerio";
 import Album from "../Albums/Album";
 import Artist from "../Artists/Artist";
 import { Constants, Config } from "../Constants";
@@ -53,14 +53,24 @@ export default class Song {
         if (!this.url) throw new Error("No Track URL");
         try {
             const { data } = await axios.get(this.url, this.config.requestOptions);
-            const DOM = htmlparser(data);
-            const lyricsDiv = DOM.querySelector(".lyrics");
-            if (!lyricsDiv || !lyricsDiv.text) throw new Error(Constants.NO_RESULT);
+            const $ = cheerio.load(data);
+            const lyricsDivs = $("div[class*='Lyrics__Container']");
 
-            let lyrics = lyricsDiv.text.trim();
-            if (!lyrics) throw new Error(Constants.NO_RESULT);
-            if (removeChorus) lyrics = lyrics.split("\n").filter(line => !line.startsWith("[") && !line.endsWith("]")).join("\n");
-            return lyrics;
+            if (!lyricsDivs.length) throw new Error(Constants.NO_RESULT);
+
+            let lyrics = "";
+            lyricsDivs.each(function () {
+                const ele = $(this);
+                ele.find("br").replaceWith("\n");
+                
+                let text = ele.text();
+                lyrics += "\n" + text.trim();
+            });
+            if (!lyrics.length) throw new Error(Constants.NO_RESULT);
+
+            if (removeChorus) lyrics = lyrics.replace(/^\[.*\]$/gm, "");
+
+            return lyrics.trim();
         } catch (err) {
             if (err && err.response && err.response.status && err.response.status == 401) throw new Error(Constants.INV_TOKEN);
             throw err;

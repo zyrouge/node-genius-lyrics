@@ -23,7 +23,7 @@
   "homepage": "https://genius-lyrics.js.org",
   "dependencies": {
     "axios": "^0.21.1",
-    "node-html-parser": "^3.0.4"
+    "cheerio": "^1.0.0-rc.9"
   },
   "devDependencies": {
     "@types/node": "^14.14.32",

@@ -37,7 +37,7 @@ const test = async () => {
     await wait(timeout);
 
     const sidlyrics = await tryRun(() => firstSong.lyrics());
-    console.log(`\nLyrics of ${SongWID.title}:`);
+    console.log(`\nLyrics of ${firstSong.title}:`);
     console.log(sidlyrics);
     await wait(timeout);
 
