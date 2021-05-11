@@ -322,7 +322,7 @@
 										"id": 161,
 										"name": "Config"
 									},
-									"defaultValue": "..."
+									"defaultValue": "{}"
 								}
 							],
 							"type": {
@@ -829,7 +829,7 @@
 											]
 										}
 									},
-									"defaultValue": "..."
+									"defaultValue": "{}"
 								}
 							],
 							"type": {
@@ -942,7 +942,7 @@
 										"id": 161,
 										"name": "Config"
 									},
-									"defaultValue": "..."
+									"defaultValue": "{}"
 								}
 							],
 							"type": {
@@ -1129,7 +1129,7 @@
 										"id": 161,
 										"name": "Config"
 									},
-									"defaultValue": "..."
+									"defaultValue": "{}"
 								}
 							],
 							"type": {
@@ -1396,7 +1396,7 @@
 										"id": 161,
 										"name": "Config"
 									},
-									"defaultValue": "..."
+									"defaultValue": "{}"
 								}
 							],
 							"type": {
@@ -1698,7 +1698,7 @@
 					"sources": [
 						{
 							"fileName": "Songs/Song.ts",
-							"line": 74,
+							"line": 84,
 							"character": 15
 						}
 					],
@@ -1888,7 +1888,7 @@
 										"id": 161,
 										"name": "Config"
 									},
-									"defaultValue": "..."
+									"defaultValue": "{}"
 								}
 							],
 							"type": {
