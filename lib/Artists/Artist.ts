@@ -76,7 +76,7 @@ export default class Artist {
             if (!data.response || !data.response.songs || !data.response.songs.length) throw new Error(Constants.NO_RESULT);
 
             return data.response.songs.map((s: any) => new Song(s, this.key, true, this.config));
-        } catch (err) {
+        } catch (err: any) {
             if (err && err.response && err.response.status && err.response.status == 401) throw new Error(Constants.INV_TOKEN);
             throw err;
         }
@@ -107,7 +107,7 @@ export default class Artist {
             this.partial = false;
 
             return new Artist(data.response.artist, this.key, false, this.config);
-        } catch (err) {
+        } catch (err: any) {
             if (err && err.response && err.response.status && err.response.status == 401) throw new Error(Constants.INV_TOKEN);
             throw err;
         }

@@ -13,7 +13,7 @@ const tryRun = async (func: () => any) => {
         try {
             let res = await func();
             return res;
-        } catch (err) {
+        } catch (err: any) {
             tries += 1;
             error = err;
         }

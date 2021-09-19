@@ -38,7 +38,7 @@ export default class ArtistsClient {
             if (!data.response.artist) throw new Error(Constants.NO_RESULT);
 
             return new Artist(data.response.artist, this.key, false, this.config);            
-        } catch (err) {
+        } catch (err: any) {
             if (err && err.response && err.response.status && err.response.status == 401) throw new Error(Constants.INV_TOKEN);
             throw err;
         }

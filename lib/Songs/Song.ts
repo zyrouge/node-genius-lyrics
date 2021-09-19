@@ -52,7 +52,11 @@ export default class Song {
         if (typeof removeChorus !== "boolean") throw new Error("Invalid 'removeChorus' type");
         if (!this.url) throw new Error("No Track URL");
         try {
-            const { data } = await axios.get(this.url, this.config.requestOptions);
+            const config = this.config.requestOptions || {};
+            if (!config.headers) config.headers = {};
+            if (!config.headers["User-Agent"]) config.headers["User-Agent"] = Constants.DEF_USER_AGENT;
+
+            const { data } = await axios.get(this.url, config);
             const $ = cheerio.load(data);
             const lyricsDivs = $("div[class*='Lyrics__Container']");
 
@@ -71,7 +75,7 @@ export default class Song {
             if (removeChorus) lyrics = lyrics.replace(/^\[.*\]$/gm, "");
 
             return lyrics.trim();
-        } catch (err) {
+        } catch (err: any) {
             if (err && err.response && err.response.status && err.response.status == 401) throw new Error(Constants.INV_TOKEN);
             throw err;
         }
@@ -99,7 +103,7 @@ export default class Song {
             this.partial = false;
 
             return this;
-        } catch (err) {
+        } catch (err: any) {
             if (err && err.response && err.response.status && err.response.status == 401) throw new Error(Constants.INV_TOKEN);
             throw err;
         }

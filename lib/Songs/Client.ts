@@ -56,7 +56,7 @@ export default class SongsClient {
             }
 
             return result.filter(s => s.type === "song").map(s => new Song(s.result, this.key, true, this.config));
-        } catch (err) {
+        } catch (err: any) {
             if (err && err.response && err.response.status && err.response.status == 401) throw new Error(Constants.INV_TOKEN);
             throw err;
         }
@@ -82,7 +82,7 @@ export default class SongsClient {
             if (data.meta.status !== 200) throw new Error(Constants.ERR_W_MSG(data.meta.status, data.meta.message));
 
             return new Song(data.response.song, this.key, false, this.config);
-        } catch (err) {
+        } catch (err: any) {
             if (err && err.response && err.response.status && err.response.status == 401) throw new Error(Constants.INV_TOKEN);
             throw err;
         }
