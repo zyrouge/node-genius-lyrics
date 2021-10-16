@@ -58,19 +58,18 @@ export default class Song {
 
             const { data } = await axios.get(this.url, config);
             const $ = cheerio.load(data);
+            const lyricsDivs = $("div[class*='Lyrics__Container']");
 
-            let lyrics = $("div[class='lyrics']").text().trim();
-            if (!lyrics.length) {
-                lyrics = "";
-                $("div[class*='Lyrics__Container']").each(function () {
-                    const ele = $(this);
-                    ele.find("br").replaceWith("\n");
+            if (!lyricsDivs.length) throw new Error(Constants.NO_RESULT);
 
-                    let text = ele.text();
-                    lyrics += "\n" + text.trim();
-                });
-            }
-
+            let lyrics = "";
+            lyricsDivs.each(function () {
+                const ele = $(this);
+                ele.find("br").replaceWith("\n");
+                
+                let text = ele.text();
+                lyrics += "\n" + text.trim();
+            });
             if (!lyrics.length) throw new Error(Constants.NO_RESULT);
 
             if (removeChorus) lyrics = lyrics.replace(/^\[.*\]$/gm, "");
