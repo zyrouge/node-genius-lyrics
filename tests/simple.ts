@@ -8,18 +8,19 @@ const Client = new Genius.Client(Token);
 const wait = util.promisify(setTimeout);
 
 const tryRun = async (func: () => any) => {
-    let tries = 0, maxtries = 3, error: any;
-    while (tries < maxtries) {
-        try {
-            let res = await func();
-            return res;
-        } catch (err: any) {
-            tries += 1;
-            error = err;
-        }
-        wait(timeout);
-    }
-    throw error;
+    // let tries = 0, maxtries = 3, error: any;
+    // while (tries < maxtries) {
+    //     try {
+    //         let res = await func();
+    //         return res;
+    //     } catch (err: any) {
+    //         tries += 1;
+    //         error = err;
+    //     }
+    //     wait(timeout);
+    // }
+    // throw error;
+    return await func();
 }
 
 const test = async () => {

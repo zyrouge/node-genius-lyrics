@@ -1,5 +1,5 @@
 import axios from "axios";
-import cheerio from "cheerio";
+import cheerio, { Cheerio } from "cheerio";
 import Album from "../Albums/Album";
 import Artist from "../Artists/Artist";
 import { Constants, Config } from "../Constants";
@@ -55,18 +55,29 @@ export default class Song {
             const config = this.config.requestOptions || {};
             if (!config.headers) config.headers = {};
             if (!config.headers["User-Agent"]) config.headers["User-Agent"] = Constants.DEF_USER_AGENT;
+            config.withCredentials = true;
 
             const { data } = await axios.get(this.url, config);
-            const $ = cheerio.load(data);
-            const lyricsDivs = $("div[class*='Lyrics__Container']");
-
-            if (!lyricsDivs.length) throw new Error(Constants.NO_RESULT);
 
             let lyrics = "";
+
+            const $ = cheerio.load(data);
+            let lyricsDivs: Cheerio<Element> | undefined = undefined;
+
+            const selectors = [".lyrics", "div[class*='Lyrics__Container']"];
+            for (const x of selectors) {
+                const divs: Cheerio<Element> = $(x) as any;
+                if (divs.length > 0) {
+                    lyricsDivs = divs;
+                    break;
+                }
+            }
+            if (!lyricsDivs) throw new Error(Constants.NO_RESULT);
+
             lyricsDivs.each(function () {
-                const ele = $(this);
+                const ele = $(this as any);
                 ele.find("br").replaceWith("\n");
-                
+
                 let text = ele.text();
                 lyrics += "\n" + text.trim();
             });
@@ -76,7 +87,6 @@ export default class Song {
 
             return lyrics.trim();
         } catch (err: any) {
-            if (err && err.response && err.response.status && err.response.status == 401) throw new Error(Constants.INV_TOKEN);
             throw err;
         }
     }
