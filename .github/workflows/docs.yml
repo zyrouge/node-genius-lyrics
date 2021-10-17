@@ -1,31 +1,32 @@
 name: Documentation
 
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - master
+    workflow_dispatch:
+    push:
+        branches:
+            - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
+        steps:
+            - uses: actions/checkout@v2
 
-      - name: Use Node.js 12.18.3
-        uses: actions/setup-node@v1
-        with:
-          node-version: "12.18.3"
+            - name: Use Node.js 16.8.0
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 16.8.0
+                  cache: npm
 
-      - name: Installing dependencies...
-        run: npm install -D
+            - name: Installing dependencies
+              run: npm ci
 
-      - name: Building site...
-        run: npm run docs
+            - name: Building site
+              run: npm run docs
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: gh-pages
-          folder: docs
+            - name: Deploy
+              uses: JamesIves/github-pages-deploy-action@4.1.0
+              with:
+                  branch: gh-pages
+                  folder: docs
