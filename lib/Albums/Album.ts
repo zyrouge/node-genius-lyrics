@@ -13,12 +13,21 @@ export default class Album {
     raw: any;
 
     constructor(res: any, artist: Artist) {
-        if(!res || typeof res !== "object") throw new Error(Constants.INV_RES_OBJ);
-        if (!artist || typeof artist !== "object" || !(artist instanceof Artist)) throw new Error(Constants.INV_RES_OBJ);
+        if (!res || typeof res !== "object") {
+            throw new Error(Constants.INV_RES_OBJ);
+        }
+
+        if (
+            !artist ||
+            typeof artist !== "object" ||
+            !(artist instanceof Artist)
+        ) {
+            throw new Error(Constants.INV_RES_OBJ);
+        }
 
         this.name = res.name;
         this.title = res.title;
-        this.id = Number(res.id);
+        this.id = +res.id;
         this.image = res.cover_art_url;
         this.url = res.url;
         this.endpoint = res.api_path;

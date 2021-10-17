@@ -7,7 +7,7 @@ import Album from "./Albums/Album";
 import Utils from "./Utils";
 import { Constants, Config } from "./Constants";
 
-const Version: string = require("../package.json").version;
+const version: string = require("../package.json").version;
 
 export {
     Client,
@@ -19,7 +19,7 @@ export {
     Constants,
     Config,
     Utils,
-    Version
+    version,
 };
 
 export default {
@@ -31,5 +31,5 @@ export default {
     Album,
     Constants,
     Utils,
-    Version
+    version,
 };

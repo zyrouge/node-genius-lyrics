@@ -27,7 +27,7 @@ export default class Song {
         this.title = res.title;
         this.fullTitle = res.full_title;
         this.featuredTitle = res.title_with_featured;
-        this.id = Number(res.id);
+        this.id = +res.id;
         this.thumbnail = res.header_image_thumbnail_url;
         this.image = res.header_image_url;
         this.url = res.url;

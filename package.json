@@ -9,7 +9,7 @@
     "scripts": {
         "build": "node ./scripts/build && tsc",
         "docs": "typedoc && node ./scripts/docs",
-        "test": "npm run build && ts-node ./tests/simple.ts"
+        "test": "ts-node ./test.ts"
     },
     "repository": {
         "type": "git",
@@ -26,7 +26,6 @@
         "got": "^11.8.2"
     },
     "devDependencies": {
-        "@types/node": "^14.14.32",
         "rimraf": "^3.0.2",
         "ts-node": "^9.1.1",
         "typedoc": "^0.20.30",

@@ -21,7 +21,7 @@
         "forceConsistentCasingInFileNames": true,
         "resolveJsonModule": true
     },
-    "exclude": ["test"],
+    "include": ["lib"],
     "typedocOptions": {
         "name": "Genius-Lyrics Documentation",
         "entryPoints": ["lib/index.ts"],

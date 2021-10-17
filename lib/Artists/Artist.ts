@@ -25,14 +25,14 @@ export default class Artist {
         public partial: boolean = false
     ) {
         this.name = res.name;
-        this.id = Number(res.id);
+        this.id = +res.id;
         this.url = res.url;
         this.thumbnail = res.image_url;
         this.image = res.header_image_url;
-        this.iq = Number(res.iq) || 0;
+        this.iq = +res.iq ?? 0;
         this.verified = {
-            normal: Boolean(res.is_verified),
-            meme: Boolean(res.is_meme_verified),
+            normal: res.is_verified,
+            meme: res.is_meme_verified,
         };
         this.socialmedia = {
             facebook: res.facebook_name || undefined,

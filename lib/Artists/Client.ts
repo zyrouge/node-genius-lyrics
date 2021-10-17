@@ -27,5 +27,3 @@ export default class ArtistsClient {
         return new Artist(this.client, parsed.response.artist, false);
     }
 }
-
-module.exports = ArtistsClient;
