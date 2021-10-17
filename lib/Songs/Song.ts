@@ -1,11 +1,11 @@
 import got from "got";
 import cheerio, { Cheerio } from "cheerio";
-import Client from "../Client";
-import Album from "../Albums/Album";
-import Artist from "../Artists/Artist";
+import { Client } from "../Client";
+import { Album } from "../Albums/Album";
+import { Artist } from "../Artists/Artist";
 import { Constants } from "../Constants";
 
-export default class Song {
+export class Song {
     title: string;
     fullTitle: string;
     featuredTitle: string;

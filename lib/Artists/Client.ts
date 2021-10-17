@@ -1,8 +1,8 @@
-import Client from "../Client";
-import Artist from "./Artist";
+import { Client } from "../Client";
+import { Artist } from "./Artist";
 import { Constants } from "../Constants";
 
-export default class ArtistsClient {
+export class ArtistsClient {
     /**
      * @example const ArtistsClient = await Genius.Artist.Client(key);
      */

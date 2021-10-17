@@ -1,7 +1,10 @@
 import got, { OptionsOfTextResponseBody, RequestError } from "got";
 import { Constants } from "./Constants";
 
-export default class Requester {
+/**
+ * Refer [got.Options](https://www.npmjs.com/package/got) for documentation of `OptionsOfTextResponseBody`
+ */
+export class Requester {
     constructor(
         public readonly url: string,
         public readonly options: OptionsOfTextResponseBody

@@ -1,9 +1,9 @@
 import got from "got";
 import { Client } from "../";
-import Song from "./Song";
+import { Song } from "./Song";
 import { Constants } from "../Constants";
 
-export default class SongsClient {
+export class SongsClient {
     /**
      * @example const SongsClient = new Genius.Songs.Client(key);
      */

@@ -1,7 +1,7 @@
-import Artist from "../Artists/Artist";
+import { Artist } from "../Artists/Artist";
 import { Constants } from "../Constants";
 
-export default class Album {
+export class Album {
     name: string;
     title: string;
     id: number;

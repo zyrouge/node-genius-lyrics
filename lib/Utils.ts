@@ -1,6 +1,6 @@
 import { Config } from "./Constants";
 
-const checkConfig = (config: any): config is Config => {
+export const checkConfig = (config: any): config is Config => {
     if (!config || typeof config !== "object") {
         return false;
     }
@@ -21,5 +21,3 @@ const checkConfig = (config: any): config is Config => {
 
     return true;
 };
-
-export default { checkConfig };

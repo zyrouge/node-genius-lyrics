@@ -1,8 +1,8 @@
-import Client from "../Client";
+import { Client } from "../Client";
+import { Song } from "../Songs/Song";
 import { Constants } from "../Constants";
-import Song from "../Songs/Song";
 
-export default class Artist {
+export class Artist {
     name: string;
     id: number;
     url: string;

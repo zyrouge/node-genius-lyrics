@@ -24,9 +24,9 @@
     "include": ["lib"],
     "typedocOptions": {
         "name": "Genius-Lyrics Documentation",
-        "entryPoints": ["lib/index.ts"],
+        "entryPoints": ["./lib/index.ts"],
         "out": "./docs",
         "json": "./docs/docs.json",
-        "theme": "./scripts/typedoc-theme"
+        "excludeExternals": true
     }
 }

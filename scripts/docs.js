@@ -1,12 +1,14 @@
-const fs = require("fs");
-const path = require("path");
+const { writeFile } = require("fs/promises");
+const { join } = require("path");
 
 const URL = "genius-lyrics.js.org";
 
 const start = async () => {
-    const cnamedir = path.resolve(__dirname, "..", "docs", "CNAME");
-    fs.writeFileSync(cnamedir, URL);
+    const cnamedir = join(__dirname, "../docs/CNAME");
+
+    await writeFile(cnamedir, URL);
+
     console.log(`Wrote CNAME file to ${cnamedir} pointing to '${URL}'`);
-}
+};
 
 start();

@@ -1,11 +1,11 @@
-import Client from "./Client";
-import SongsClient from "./Songs/Client";
-import ArtistsClient from "./Artists/Client";
-import Song from "./Songs/Song";
-import Artist from "./Artists/Artist";
-import Album from "./Albums/Album";
-import Utils from "./Utils";
+import { Client } from "./Client";
+import { SongsClient } from "./Songs/Client";
+import { ArtistsClient } from "./Artists/Client";
+import { Song } from "./Songs/Song";
+import { Artist } from "./Artists/Artist";
+import { Album } from "./Albums/Album";
 import { Constants, Config } from "./Constants";
+import * as Utils from "./Utils";
 
 const version: string = require("../package.json").version;
 

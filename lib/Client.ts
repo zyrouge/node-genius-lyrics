@@ -1,10 +1,10 @@
 import { Config, Constants } from "./Constants";
-import Utils from "./Utils";
-import Requester from "./Requester";
-import ArtistsClient from "./Artists/Client";
-import SongsClient from "./Songs/Client";
+import { checkConfig } from "./Utils";
+import { Requester } from "./Requester";
+import { ArtistsClient } from "./Artists/Client";
+import { SongsClient } from "./Songs/Client";
 
-export default class Client {
+export class Client {
     songs: SongsClient;
     artists: ArtistsClient;
     api: Requester;
@@ -17,7 +17,7 @@ export default class Client {
             throw new Error(Constants.INV_TOKEN);
         }
 
-        if (!Utils.checkConfig(config)) {
+        if (!checkConfig(config)) {
             throw new Error(Constants.INV_CONFIG_OBJ);
         }
 

@@ -1,11 +1,20 @@
-const { sync: rimraf } = require("rimraf");
-const path = require("path");
+const { rm } = require("fs/promises");
+const { join } = require("path");
 
 const start = async () => {
     const startTime = Date.now();
-    const buildDir = path.resolve(__dirname, "..", "dist");
-    rimraf(buildDir);
-    console.log(`Deleted previous build files from ${buildDir} in ${Date.now() - startTime}ms!`);
-}
+    const buildDir = join(__dirname, "../dist");
+
+    await rm(buildDir, {
+        recursive: true,
+        force: true,
+    });
+
+    console.log(
+        `Deleted previous build files from ${buildDir} in ${
+            Date.now() - startTime
+        }ms!`
+    );
+};
 
 start();
