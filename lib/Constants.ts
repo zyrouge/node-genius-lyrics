@@ -1,7 +1,7 @@
-import { AxiosRequestConfig } from "axios";
+import { OptionsOfTextResponseBody } from "got";
 
 export interface Config {
-    requestOptions?: AxiosRequestConfig;
+    requestOptions?: Omit<OptionsOfTextResponseBody, "responseType">;
     origin?: {
         api?: string;
         url?: string;

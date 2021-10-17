@@ -1,9 +1,9 @@
-import axios from "axios";
+import got from "got";
 import cheerio, { Cheerio } from "cheerio";
+import Client from "../Client";
 import Album from "../Albums/Album";
 import Artist from "../Artists/Artist";
-import { Constants, Config } from "../Constants";
-import Utils from "../Utils";
+import { Constants } from "../Constants";
 
 export default class Song {
     title: string;
@@ -15,18 +15,15 @@ export default class Song {
     url: string;
     endpoint: string;
     artist: Artist;
-    partial: boolean;
     album?: Album;
     releasedAt?: Date;
     raw: any;
-    private key?: string;
-    private config: Config;
 
-    constructor(res: any, key?: string, partial: boolean = false, config: Config = {}) {
-        if (!res || typeof res !== "object") throw new Error(Constants.INV_RES_OBJ);
-        if (key && typeof key !== "string") throw new Error(Constants.INV_TOKEN);
-        if (!Utils.checkConfig(config)) throw new Error(Constants.INV_CONFIG_OBJ);
-
+    constructor(
+        public readonly client: Client,
+        res: any,
+        public partial: boolean = false
+    ) {
         this.title = res.title;
         this.fullTitle = res.full_title;
         this.featuredTitle = res.title_with_featured;
@@ -35,13 +32,17 @@ export default class Song {
         this.image = res.header_image_url;
         this.url = res.url;
         this.endpoint = res.api_path;
-        this.artist = new Artist(res.primary_artist, key, true);
-        this.partial = Boolean(partial);
-        this.album = !this.partial && res.album ? new Album(res.album, this.artist) : undefined;
-        this.releasedAt = !this.partial && res.release_date ? new Date(res.release_date) : undefined;
+        this.artist = new Artist(this.client, res.primary_artist, true);
+        this.partial = partial;
+        this.album =
+            !this.partial && res.album
+                ? new Album(res.album, this.artist)
+                : undefined;
+        this.releasedAt =
+            !this.partial && res.release_date
+                ? new Date(res.release_date)
+                : undefined;
         this.raw = res;
-        this.key = key || undefined;
-        this.config = config;
     }
 
     /**
@@ -49,46 +50,47 @@ export default class Song {
      * @example const Lyrics = await Song.lyrics(true);
      */
     async lyrics(removeChorus: boolean = false) {
-        if (typeof removeChorus !== "boolean") throw new Error("Invalid 'removeChorus' type");
-        if (!this.url) throw new Error("No Track URL");
-        try {
-            const config = this.config.requestOptions || {};
-            if (!config.headers) config.headers = {};
-            if (!config.headers["User-Agent"]) config.headers["User-Agent"] = Constants.DEF_USER_AGENT;
-            config.withCredentials = true;
-
-            const { data } = await axios.get(this.url, config);
-
-            let lyrics = "";
-
-            const $ = cheerio.load(data);
-            let lyricsDivs: Cheerio<Element> | undefined = undefined;
-
-            const selectors = [".lyrics", "div[class*='Lyrics__Container']"];
-            for (const x of selectors) {
-                const divs: Cheerio<Element> = $(x) as any;
-                if (divs.length > 0) {
-                    lyricsDivs = divs;
-                    break;
-                }
-            }
-            if (!lyricsDivs) throw new Error(Constants.NO_RESULT);
-
-            lyricsDivs.each(function () {
-                const ele = $(this as any);
-                ele.find("br").replaceWith("\n");
-
-                let text = ele.text();
-                lyrics += "\n" + text.trim();
-            });
-            if (!lyrics.length) throw new Error(Constants.NO_RESULT);
-
-            if (removeChorus) lyrics = lyrics.replace(/^\[.*\]$/gm, "");
-
-            return lyrics.trim();
-        } catch (err: any) {
-            throw err;
+        if (typeof removeChorus !== "boolean") {
+            throw new Error("Invalid 'removeChorus' type");
         }
+
+        const { body } = await got.get(this.url, {
+            ...this.client.config.requestOptions,
+            headers: {
+                "User-Agent": Constants.DEF_USER_AGENT,
+                ...this.client.config.requestOptions?.headers,
+            },
+        });
+
+        const $ = cheerio.load(body);
+        let lyricsDivs: Cheerio<Element> | undefined = undefined;
+
+        const selectors = [".lyrics", "div[class*='Lyrics__Container']"];
+        for (const x of selectors) {
+            const divs: Cheerio<Element> = $(x) as any;
+            if (divs.length > 0) {
+                lyricsDivs = divs;
+                break;
+            }
+        }
+        if (!lyricsDivs?.length) {
+            throw new Error(Constants.NO_RESULT);
+        }
+
+        let lyrics = lyricsDivs
+            .toArray()
+            .map((x) => {
+                const ele = $(x as any);
+                ele.find("br").replaceWith("\n");
+                return ele.text();
+            })
+            .join("\n");
+
+        if (removeChorus) {
+            lyrics = lyrics.replace(/^\[.*\]$/gm, "");
+        }
+
+        return lyrics.trim();
     }
 
     /**
@@ -96,26 +98,21 @@ export default class Song {
      * @example const NewSong = await Song.fetch();
      */
     async fetch() {
-        if (!this.key) throw new Error(Constants.REQUIRES_KEY);
-        try {
-            const config = this.config.requestOptions || {};
-            if (!config.headers) config.headers = {};
-            if (!config.headers["User-Agent"]) config.headers["User-Agent"] = Constants.DEF_USER_AGENT;
-            config.headers["Authorization"] = `Bearer ${this.key}`;
-            const { data } = await axios.get(`${this.config.origin?.api || Constants.BASE_URL}/songs/${this.id}`, config);
-            if (data.error) throw new Error(Constants.ERR_W_MSG(data.error, data.error_description));
-            if (!data || !data.meta || data.meta.status == 404) throw new Error(Constants.NO_RESULT);
-            if (data.meta.status !== 200) throw new Error(Constants.ERR_W_MSG(data.meta.status, data.meta.message));
-            if (!data.response || !data.response.song) throw new Error(Constants.NO_RESULT);
-
-            this.album = data.response.song.album ? new Album(data.response.song.album, this.artist) : undefined;
-            this.releasedAt = data.response.song.release_date ? new Date(data.response.song.release_date) : undefined;
-            this.partial = false;
-
-            return this;
-        } catch (err: any) {
-            if (err && err.response && err.response.status && err.response.status == 401) throw new Error(Constants.INV_TOKEN);
-            throw err;
+        if (!this.client.key) {
+            throw new Error(Constants.REQUIRES_KEY);
         }
+
+        const data = await this.client.api.get(`/songs/${this.id}`);
+        const parsed = JSON.parse(data);
+
+        this.album = parsed.song.album
+            ? new Album(parsed.song.album, this.artist)
+            : undefined;
+        this.releasedAt = parsed.song.release_date
+            ? new Date(parsed.song.release_date)
+            : undefined;
+        this.partial = false;
+
+        return this;
     }
 }

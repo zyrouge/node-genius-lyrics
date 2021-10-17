@@ -1,44 +1,44 @@
 {
-  "name": "genius-lyrics",
-  "version": "4.2.9",
-  "description": "Fetches Lyrics from Genius at Ease.",
-  "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "node ./scripts/build && tsc",
-    "docs": "typedoc && node ./scripts/docs",
-    "test": "npm run build && ts-node ./tests/simple.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zyrouge/genius-lyrics.git"
-  },
-  "author": "ZYROUGE",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zyrouge/genius-lyrics/issues"
-  },
-  "homepage": "https://genius-lyrics.js.org",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "cheerio": "^1.0.0-rc.9"
-  },
-  "devDependencies": {
-    "@types/node": "^14.14.32",
-    "rimraf": "^3.0.2",
-    "ts-node": "^9.1.1",
-    "typedoc": "^0.20.30",
-    "typescript": "^4.2.3"
-  },
-  "keywords": [
-    "lyrics",
-    "genius",
-    "genius-lyrics",
-    "lyrics-api",
-    "discord-lyrics",
-    "lyrics-genius",
-    "genius-parser"
-  ]
+    "name": "genius-lyrics",
+    "version": "4.2.9",
+    "description": "Fetches Lyrics from Genius at Ease.",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "node ./scripts/build && tsc",
+        "docs": "typedoc && node ./scripts/docs",
+        "test": "npm run build && ts-node ./tests/simple.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zyrouge/genius-lyrics.git"
+    },
+    "author": "ZYROUGE",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/zyrouge/genius-lyrics/issues"
+    },
+    "homepage": "https://genius-lyrics.js.org",
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.9",
+        "got": "^11.8.2"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.32",
+        "rimraf": "^3.0.2",
+        "ts-node": "^9.1.1",
+        "typedoc": "^0.20.30",
+        "typescript": "^4.4.4"
+    },
+    "keywords": [
+        "lyrics",
+        "genius",
+        "genius-lyrics",
+        "lyrics-api",
+        "discord-lyrics",
+        "lyrics-genius",
+        "genius-parser"
+    ]
 }

@@ -1,29 +1,37 @@
 import { Config, Constants } from "./Constants";
 import Utils from "./Utils";
+import Requester from "./Requester";
 import ArtistsClient from "./Artists/Client";
 import SongsClient from "./Songs/Client";
 
 export default class Client {
-    private key?: string;
-    private config: Config;
+    songs: SongsClient;
+    artists: ArtistsClient;
+    api: Requester;
 
-    constructor(key?: string, config: Config = {}) {
-        if (key && typeof key !== "string") throw new Error(Constants.INV_TOKEN);
-        if (!Utils.checkConfig(config)) throw new Error(Constants.INV_CONFIG_OBJ);
+    constructor(
+        public readonly key?: string,
+        public readonly config: Config = {}
+    ) {
+        if (!["string", "undefined"].includes(typeof key)) {
+            throw new Error(Constants.INV_TOKEN);
+        }
 
-        this.key = key || undefined;
-        this.config = config;
-    }
+        if (!Utils.checkConfig(config)) {
+            throw new Error(Constants.INV_CONFIG_OBJ);
+        }
 
-    setKey(key: string | undefined) {
-        this.key = key;
-    }
+        this.songs = new SongsClient(this);
+        this.artists = new ArtistsClient(this);
 
-    get songs() {
-        return new SongsClient(this.key, this.config);
-    }
-
-    get artists() {
-        return new ArtistsClient(this.key, this.config);
+        this.api = new Requester(
+            this.config.origin?.api || Constants.BASE_URL,
+            {
+                headers: {
+                    "User-Agent": Constants.DEF_USER_AGENT,
+                    Authorization: `Bearer ${this.key}`,
+                },
+            }
+        );
     }
 }
