@@ -1,8 +1,10 @@
 <h1 align="center">Genius Lyrics 🎵</h1>
 
-[![Node.js CI](https://github.com/zyrouge/genius-lyrics/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/zyrouge/genius-lyrics/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/genius-lyrics)](https://npmjs.com/package/genius-lyrics)
+[![npm](https://img.shields.io/npm/dw/genius-lyrics)](https://npmjs.com/package/genius-lyrics)
+[![npm](https://img.shields.io/npm/l/genius-lyrics)](https://npmjs.com/package/genius-lyrics)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fzyrouge%2Fgenius-lyrics.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fzyrouge%2Fgenius-lyrics?ref=badge_shield)
-[![Documentation](https://github.com/zyrouge/genius-lyrics/actions/workflows/docs.yml/badge.svg)](https://github.com/zyrouge/genius-lyrics/actions/workflows/docs.yml)
+[![Documentation](https://github.com/zyrouge/genius-lyrics/actions/workflows/docs.yml/badge.svg?branch=master)](https://github.com/zyrouge/genius-lyrics/actions/workflows/docs.yml)
 
 ## 🤔 Whats is this?
 
@@ -23,9 +25,9 @@ const Client = new Genius.Client("top-secret-optional-key");
 
 ## 📎 Links
 
-- [Documentation](https://genius-lyrics.js.org/)
-- [NPM](https://npmjs.com/genius-lyrics)
-- [GitHub](https://github.com/zyrouge/genius-lyrics)
+-   [Documentation](https://genius-lyrics.js.org/)
+-   [NPM](https://npmjs.com/genius-lyrics)
+-   [GitHub](https://github.com/zyrouge/genius-lyrics)
 
 ## ✏️ Examples
 
