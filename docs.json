@@ -6,14 +6,14 @@
 	"flags": {},
 	"children": [
 		{
-			"id": 154,
+			"id": 157,
 			"name": "<internal>",
 			"kind": 4,
 			"kindString": "Namespace",
 			"flags": {},
 			"children": [
 				{
-					"id": 155,
+					"id": 158,
 					"name": "Requester",
 					"kind": 128,
 					"kindString": "Class",
@@ -23,7 +23,7 @@
 					},
 					"children": [
 						{
-							"id": 156,
+							"id": 159,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -37,14 +37,14 @@
 							],
 							"signatures": [
 								{
-									"id": 157,
+									"id": 160,
 									"name": "new Requester",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 158,
+											"id": 161,
 											"name": "url",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -55,7 +55,7 @@
 											}
 										},
 										{
-											"id": 159,
+											"id": 162,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -68,14 +68,14 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 155,
+										"id": 158,
 										"name": "Requester"
 									}
 								}
 							]
 						},
 						{
-							"id": 161,
+							"id": 164,
 							"name": "options",
 							"kind": 1024,
 							"kindString": "Property",
@@ -89,7 +89,7 @@
 							}
 						},
 						{
-							"id": 160,
+							"id": 163,
 							"name": "url",
 							"kind": 1024,
 							"kindString": "Property",
@@ -103,7 +103,7 @@
 							}
 						},
 						{
-							"id": 166,
+							"id": 169,
 							"name": "_handleError",
 							"kind": 2048,
 							"kindString": "Method",
@@ -117,14 +117,14 @@
 							],
 							"signatures": [
 								{
-									"id": 167,
+									"id": 170,
 									"name": "_handleError",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 168,
+											"id": 171,
 											"name": "err",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -143,7 +143,7 @@
 							]
 						},
 						{
-							"id": 162,
+							"id": 165,
 							"name": "get",
 							"kind": 2048,
 							"kindString": "Method",
@@ -157,14 +157,14 @@
 							],
 							"signatures": [
 								{
-									"id": 163,
+									"id": 166,
 									"name": "get",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 164,
+											"id": 167,
 											"name": "route",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -175,7 +175,7 @@
 											}
 										},
 										{
-											"id": 165,
+											"id": 168,
 											"name": "headers",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -217,23 +217,23 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								156
+								159
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								161,
-								160
+								164,
+								163
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								166,
-								162
+								169,
+								165
 							]
 						}
 					],
@@ -251,20 +251,20 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						155
+						158
 					]
 				}
 			]
 		},
 		{
-			"id": 150,
+			"id": 153,
 			"name": "Utils",
 			"kind": 4,
 			"kindString": "Namespace",
 			"flags": {},
 			"children": [
 				{
-					"id": 151,
+					"id": 154,
 					"name": "checkConfig",
 					"kind": 64,
 					"kindString": "Function",
@@ -280,14 +280,14 @@
 					],
 					"signatures": [
 						{
-							"id": 152,
+							"id": 155,
 							"name": "checkConfig",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 153,
+									"id": 156,
 									"name": "config",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -304,7 +304,7 @@
 								"asserts": false,
 								"targetType": {
 									"type": "reference",
-									"id": 144,
+									"id": 147,
 									"name": "Config"
 								}
 							}
@@ -317,7 +317,7 @@
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						151
+						154
 					]
 				}
 			],
@@ -330,14 +330,14 @@
 			]
 		},
 		{
-			"id": 114,
+			"id": 117,
 			"name": "Album",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {},
 			"children": [
 				{
-					"id": 115,
+					"id": 118,
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
@@ -351,14 +351,14 @@
 					],
 					"signatures": [
 						{
-							"id": 116,
+							"id": 119,
 							"name": "new Album",
 							"kind": 16384,
 							"kindString": "Constructor signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 117,
+									"id": 120,
 									"name": "res",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -369,28 +369,28 @@
 									}
 								},
 								{
-									"id": 118,
+									"id": 121,
 									"name": "artist",
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 82,
+										"id": 85,
 										"name": "Artist"
 									}
 								}
 							],
 							"type": {
 								"type": "reference",
-								"id": 114,
+								"id": 117,
 								"name": "Album"
 							}
 						}
 					]
 				},
 				{
-					"id": 125,
+					"id": 128,
 					"name": "artist",
 					"kind": 1024,
 					"kindString": "Property",
@@ -404,12 +404,12 @@
 					],
 					"type": {
 						"type": "reference",
-						"id": 82,
+						"id": 85,
 						"name": "Artist"
 					}
 				},
 				{
-					"id": 124,
+					"id": 127,
 					"name": "endpoint",
 					"kind": 1024,
 					"kindString": "Property",
@@ -427,7 +427,7 @@
 					}
 				},
 				{
-					"id": 121,
+					"id": 124,
 					"name": "id",
 					"kind": 1024,
 					"kindString": "Property",
@@ -445,7 +445,7 @@
 					}
 				},
 				{
-					"id": 122,
+					"id": 125,
 					"name": "image",
 					"kind": 1024,
 					"kindString": "Property",
@@ -463,7 +463,7 @@
 					}
 				},
 				{
-					"id": 119,
+					"id": 122,
 					"name": "name",
 					"kind": 1024,
 					"kindString": "Property",
@@ -481,7 +481,7 @@
 					}
 				},
 				{
-					"id": 126,
+					"id": 129,
 					"name": "partial",
 					"kind": 1024,
 					"kindString": "Property",
@@ -499,7 +499,7 @@
 					}
 				},
 				{
-					"id": 127,
+					"id": 130,
 					"name": "raw",
 					"kind": 1024,
 					"kindString": "Property",
@@ -517,7 +517,7 @@
 					}
 				},
 				{
-					"id": 120,
+					"id": 123,
 					"name": "title",
 					"kind": 1024,
 					"kindString": "Property",
@@ -535,7 +535,7 @@
 					}
 				},
 				{
-					"id": 123,
+					"id": 126,
 					"name": "url",
 					"kind": 1024,
 					"kindString": "Property",
@@ -558,22 +558,22 @@
 					"title": "Constructors",
 					"kind": 512,
 					"children": [
-						115
+						118
 					]
 				},
 				{
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						125,
-						124,
-						121,
-						122,
-						119,
-						126,
+						128,
 						127,
-						120,
-						123
+						124,
+						125,
+						122,
+						129,
+						130,
+						123,
+						126
 					]
 				}
 			],
@@ -586,14 +586,14 @@
 			]
 		},
 		{
-			"id": 82,
+			"id": 85,
 			"name": "Artist",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {},
 			"children": [
 				{
-					"id": 83,
+					"id": 86,
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
@@ -607,14 +607,14 @@
 					],
 					"signatures": [
 						{
-							"id": 84,
+							"id": 87,
 							"name": "new Artist",
 							"kind": 16384,
 							"kindString": "Constructor signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 85,
+									"id": 88,
 									"name": "client",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -626,7 +626,7 @@
 									}
 								},
 								{
-									"id": 86,
+									"id": 89,
 									"name": "res",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -637,7 +637,7 @@
 									}
 								},
 								{
-									"id": 87,
+									"id": 90,
 									"name": "partial",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -651,14 +651,14 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 82,
+								"id": 85,
 								"name": "Artist"
 							}
 						}
 					]
 				},
 				{
-					"id": 103,
+					"id": 106,
 					"name": "client",
 					"kind": 1024,
 					"kindString": "Property",
@@ -673,7 +673,7 @@
 					}
 				},
 				{
-					"id": 89,
+					"id": 92,
 					"name": "id",
 					"kind": 1024,
 					"kindString": "Property",
@@ -691,7 +691,7 @@
 					}
 				},
 				{
-					"id": 92,
+					"id": 95,
 					"name": "image",
 					"kind": 1024,
 					"kindString": "Property",
@@ -709,7 +709,7 @@
 					}
 				},
 				{
-					"id": 93,
+					"id": 96,
 					"name": "iq",
 					"kind": 1024,
 					"kindString": "Property",
@@ -727,7 +727,7 @@
 					}
 				},
 				{
-					"id": 88,
+					"id": 91,
 					"name": "name",
 					"kind": 1024,
 					"kindString": "Property",
@@ -745,7 +745,7 @@
 					}
 				},
 				{
-					"id": 104,
+					"id": 107,
 					"name": "partial",
 					"kind": 1024,
 					"kindString": "Property",
@@ -759,7 +759,7 @@
 					"defaultValue": "false"
 				},
 				{
-					"id": 102,
+					"id": 105,
 					"name": "raw",
 					"kind": 1024,
 					"kindString": "Property",
@@ -777,7 +777,7 @@
 					}
 				},
 				{
-					"id": 98,
+					"id": 101,
 					"name": "socialmedia",
 					"kind": 1024,
 					"kindString": "Property",
@@ -792,14 +792,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 99,
+							"id": 102,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 100,
+									"id": 103,
 									"name": "facebook",
 									"kind": 1024,
 									"kindString": "Property",
@@ -819,7 +819,7 @@
 									}
 								},
 								{
-									"id": 101,
+									"id": 104,
 									"name": "twitter",
 									"kind": 1024,
 									"kindString": "Property",
@@ -844,8 +844,8 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										100,
-										101
+										103,
+										104
 									]
 								}
 							]
@@ -853,7 +853,7 @@
 					}
 				},
 				{
-					"id": 91,
+					"id": 94,
 					"name": "thumbnail",
 					"kind": 1024,
 					"kindString": "Property",
@@ -871,7 +871,7 @@
 					}
 				},
 				{
-					"id": 90,
+					"id": 93,
 					"name": "url",
 					"kind": 1024,
 					"kindString": "Property",
@@ -889,7 +889,7 @@
 					}
 				},
 				{
-					"id": 94,
+					"id": 97,
 					"name": "verified",
 					"kind": 1024,
 					"kindString": "Property",
@@ -904,14 +904,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 95,
+							"id": 98,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 97,
+									"id": 100,
 									"name": "meme",
 									"kind": 1024,
 									"kindString": "Property",
@@ -929,7 +929,7 @@
 									}
 								},
 								{
-									"id": 96,
+									"id": 99,
 									"name": "normal",
 									"kind": 1024,
 									"kindString": "Property",
@@ -952,8 +952,8 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										97,
-										96
+										100,
+										99
 									]
 								}
 							]
@@ -961,7 +961,7 @@
 					}
 				},
 				{
-					"id": 112,
+					"id": 115,
 					"name": "fetch",
 					"kind": 2048,
 					"kindString": "Method",
@@ -975,7 +975,7 @@
 					],
 					"signatures": [
 						{
-							"id": 113,
+							"id": 116,
 							"name": "fetch",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -994,7 +994,7 @@
 								"typeArguments": [
 									{
 										"type": "reference",
-										"id": 82,
+										"id": 85,
 										"name": "Artist"
 									}
 								],
@@ -1004,7 +1004,7 @@
 					]
 				},
 				{
-					"id": 105,
+					"id": 108,
 					"name": "songs",
 					"kind": 2048,
 					"kindString": "Method",
@@ -1018,7 +1018,7 @@
 					],
 					"signatures": [
 						{
-							"id": 106,
+							"id": 109,
 							"name": "songs",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1034,7 +1034,7 @@
 							},
 							"parameters": [
 								{
-									"id": 107,
+									"id": 110,
 									"name": "options",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1042,14 +1042,14 @@
 									"type": {
 										"type": "reflection",
 										"declaration": {
-											"id": 108,
+											"id": 111,
 											"name": "__type",
 											"kind": 65536,
 											"kindString": "Type literal",
 											"flags": {},
 											"children": [
 												{
-													"id": 110,
+													"id": 113,
 													"name": "page",
 													"kind": 1024,
 													"kindString": "Property",
@@ -1069,7 +1069,7 @@
 													}
 												},
 												{
-													"id": 111,
+													"id": 114,
 													"name": "per_page",
 													"kind": 1024,
 													"kindString": "Property",
@@ -1089,7 +1089,7 @@
 													}
 												},
 												{
-													"id": 109,
+													"id": 112,
 													"name": "sort",
 													"kind": 1024,
 													"kindString": "Property",
@@ -1114,9 +1114,9 @@
 													"title": "Properties",
 													"kind": 1024,
 													"children": [
-														110,
-														111,
-														109
+														113,
+														114,
+														112
 													]
 												}
 											]
@@ -1144,32 +1144,32 @@
 					"title": "Constructors",
 					"kind": 512,
 					"children": [
-						83
+						86
 					]
 				},
 				{
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						103,
-						89,
+						106,
 						92,
-						93,
-						88,
-						104,
-						102,
-						98,
+						95,
+						96,
 						91,
-						90,
-						94
+						107,
+						105,
+						101,
+						94,
+						93,
+						97
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						112,
-						105
+						115,
+						108
 					]
 				}
 			],
@@ -1300,7 +1300,7 @@
 								"typeArguments": [
 									{
 										"type": "reference",
-										"id": 82,
+										"id": 85,
 										"name": "Artist"
 									}
 								],
@@ -1390,7 +1390,7 @@
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 144,
+										"id": 147,
 										"name": "Config"
 									},
 									"defaultValue": "{}"
@@ -1419,7 +1419,7 @@
 					],
 					"type": {
 						"type": "reference",
-						"id": 155,
+						"id": 158,
 						"name": "Requester"
 					}
 				},
@@ -1453,7 +1453,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"id": 144,
+						"id": 147,
 						"name": "Config"
 					},
 					"defaultValue": "{}"
@@ -1610,7 +1610,7 @@
 					],
 					"type": {
 						"type": "reference",
-						"id": 114,
+						"id": 117,
 						"name": "Album"
 					}
 				},
@@ -1629,7 +1629,7 @@
 					],
 					"type": {
 						"type": "reference",
-						"id": 82,
+						"id": 85,
 						"name": "Artist"
 					}
 				},
@@ -1853,7 +1853,7 @@
 					"sources": [
 						{
 							"fileName": "Songs/Song.ts",
-							"line": 100,
+							"line": 94,
 							"character": 10
 						}
 					],
@@ -1942,6 +1942,46 @@
 							}
 						}
 					]
+				},
+				{
+					"id": 82,
+					"name": "removeChorus",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "Songs/Song.ts",
+							"line": 113,
+							"character": 4
+						}
+					],
+					"signatures": [
+						{
+							"id": 83,
+							"name": "removeChorus",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 84,
+									"name": "lyrics",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
 				}
 			],
 			"groups": [
@@ -1977,7 +2017,8 @@
 					"kind": 2048,
 					"children": [
 						80,
-						77
+						77,
+						82
 					]
 				}
 			],
@@ -2210,14 +2251,14 @@
 			]
 		},
 		{
-			"id": 144,
+			"id": 147,
 			"name": "Config",
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {},
 			"children": [
 				{
-					"id": 146,
+					"id": 149,
 					"name": "origin",
 					"kind": 1024,
 					"kindString": "Property",
@@ -2234,14 +2275,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 147,
+							"id": 150,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 148,
+									"id": 151,
 									"name": "api",
 									"kind": 1024,
 									"kindString": "Property",
@@ -2261,7 +2302,7 @@
 									}
 								},
 								{
-									"id": 149,
+									"id": 152,
 									"name": "url",
 									"kind": 1024,
 									"kindString": "Property",
@@ -2286,8 +2327,8 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										148,
-										149
+										151,
+										152
 									]
 								}
 							]
@@ -2295,7 +2336,7 @@
 					}
 				},
 				{
-					"id": 145,
+					"id": 148,
 					"name": "requestOptions",
 					"kind": 1024,
 					"kindString": "Property",
@@ -2330,8 +2371,8 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						146,
-						145
+						149,
+						148
 					]
 				}
 			],
@@ -2368,7 +2409,7 @@
 								"type": "query",
 								"queryType": {
 									"type": "reference",
-									"id": 114,
+									"id": 117,
 									"name": "Album"
 								}
 							}
@@ -2383,7 +2424,7 @@
 								"type": "query",
 								"queryType": {
 									"type": "reference",
-									"id": 82,
+									"id": 85,
 									"name": "Artist"
 								}
 							}
@@ -2659,7 +2700,7 @@
 							"flags": {},
 							"type": {
 								"type": "reference",
-								"id": 150,
+								"id": 153,
 								"name": "__module"
 							}
 						},
@@ -2696,7 +2737,7 @@
 			}
 		},
 		{
-			"id": 128,
+			"id": 131,
 			"name": "Constants",
 			"kind": 32,
 			"kindString": "Variable",
@@ -2711,14 +2752,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 129,
+					"id": 132,
 					"name": "__type",
 					"kind": 65536,
 					"kindString": "Type literal",
 					"flags": {},
 					"children": [
 						{
-							"id": 132,
+							"id": 135,
 							"name": "ARTIST_SORTS",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2733,7 +2774,7 @@
 							"defaultValue": "..."
 						},
 						{
-							"id": 130,
+							"id": 133,
 							"name": "BASE_URL",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2745,7 +2786,7 @@
 							"defaultValue": "\"https://api.genius.com\""
 						},
 						{
-							"id": 133,
+							"id": 136,
 							"name": "DEF_USER_AGENT",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2757,7 +2798,7 @@
 							"defaultValue": "\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36\""
 						},
 						{
-							"id": 139,
+							"id": 142,
 							"name": "ERR_W_MSG",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2765,21 +2806,21 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 140,
+									"id": 143,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"signatures": [
 										{
-											"id": 141,
+											"id": 144,
 											"name": "__type",
 											"kind": 4096,
 											"kindString": "Call signature",
 											"flags": {},
 											"parameters": [
 												{
-													"id": 142,
+													"id": 145,
 													"name": "err",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -2790,7 +2831,7 @@
 													}
 												},
 												{
-													"id": 143,
+													"id": 146,
 													"name": "msg",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -2812,7 +2853,7 @@
 							"defaultValue": "..."
 						},
 						{
-							"id": 136,
+							"id": 139,
 							"name": "INV_CONFIG_OBJ",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2824,7 +2865,7 @@
 							"defaultValue": "\"Invalid config\""
 						},
 						{
-							"id": 135,
+							"id": 138,
 							"name": "INV_RES_OBJ",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2836,7 +2877,7 @@
 							"defaultValue": "\"Invalid response object\""
 						},
 						{
-							"id": 137,
+							"id": 140,
 							"name": "INV_TOKEN",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2848,7 +2889,7 @@
 							"defaultValue": "\"Invalid Genius Token\""
 						},
 						{
-							"id": 138,
+							"id": 141,
 							"name": "NO_RESULT",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2860,7 +2901,7 @@
 							"defaultValue": "\"No result was found\""
 						},
 						{
-							"id": 134,
+							"id": 137,
 							"name": "REQUIRES_KEY",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2872,7 +2913,7 @@
 							"defaultValue": "\"This action requires a valid Genius Token\""
 						},
 						{
-							"id": 131,
+							"id": 134,
 							"name": "UN_BASE_URL",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2889,16 +2930,16 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								132,
-								130,
-								133,
-								139,
-								136,
 								135,
-								137,
+								133,
+								136,
+								142,
+								139,
 								138,
-								134,
-								131
+								140,
+								141,
+								137,
+								134
 							]
 						}
 					]
@@ -2931,16 +2972,16 @@
 			"title": "Namespaces",
 			"kind": 4,
 			"children": [
-				154,
-				150
+				157,
+				153
 			]
 		},
 		{
 			"title": "Classes",
 			"kind": 128,
 			"children": [
-				114,
-				82,
+				117,
+				85,
 				49,
 				28,
 				57,
@@ -2951,7 +2992,7 @@
 			"title": "Interfaces",
 			"kind": 256,
 			"children": [
-				144
+				147
 			]
 		},
 		{
@@ -2965,7 +3006,7 @@
 			"title": "Variables",
 			"kind": 32,
 			"children": [
-				128,
+				131,
 				1
 			]
 		}
