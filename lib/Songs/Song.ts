@@ -1,5 +1,5 @@
 import got from "got";
-import cheerio, { Cheerio } from "cheerio";
+import cheerio from "cheerio";
 import { Client } from "../Client";
 import { Album } from "../Albums/Album";
 import { Artist } from "../Artists/Artist";
@@ -63,34 +63,28 @@ export class Song {
         });
 
         const $ = cheerio.load(body);
-        let lyricsDivs: Cheerio<Element> | undefined = undefined;
 
-        const selectors = [".lyrics", "div[class*='Lyrics__Container']"];
+        const selectors: (() => string | undefined)[] = [
+            () => $(".lyrics").text().trim(),
+            () =>
+                $("div[class*='Lyrics__Container']")
+                    .toArray()
+                    .map((x) => {
+                        const ele = $(x as any);
+                        ele.find("br").replaceWith("\n");
+                        return ele.text().trim();
+                    })
+                    .join("\n"),
+        ];
+
         for (const x of selectors) {
-            const divs: Cheerio<Element> = $(x) as any;
-            if (divs.length > 0) {
-                lyricsDivs = divs;
-                break;
+            const lyrics = x();
+            if (lyrics?.length) {
+                return lyrics;
             }
         }
-        if (!lyricsDivs?.length) {
-            throw new Error(Constants.NO_RESULT);
-        }
 
-        let lyrics = lyricsDivs
-            .toArray()
-            .map((x) => {
-                const ele = $(x as any);
-                ele.find("br").replaceWith("\n");
-                return ele.text();
-            })
-            .join("\n");
-
-        if (removeChorus) {
-            lyrics = lyrics.replace(/^\[.*\]$/gm, "");
-        }
-
-        return lyrics.trim();
+        throw new Error(Constants.NO_RESULT);
     }
 
     /**
