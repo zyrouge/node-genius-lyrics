@@ -74,7 +74,8 @@ export class Song {
                         ele.find("br").replaceWith("\n");
                         return `${ele.text().trim()}\n`;
                     })
-                    .join("\n"),
+                    .join("\n")
+                    .trim(),
         ];
 
         for (const x of selectors) {
