@@ -72,15 +72,15 @@ export class Song {
                     .map((x) => {
                         const ele = $(x as any);
                         ele.find("br").replaceWith("\n");
-                        return ele.text().trim();
+                        return `${ele.text().trim()}\n`;
                     })
                     .join("\n"),
         ];
 
         for (const x of selectors) {
-            const lyrics = x();
+            let lyrics = x();
             if (lyrics?.length) {
-                return lyrics;
+                return removeChorus ? this.removeChorus(lyrics) : lyrics;
             }
         }
 
@@ -108,5 +108,9 @@ export class Song {
         this.partial = false;
 
         return this;
+    }
+
+    removeChorus(lyrics: string) {
+        return lyrics.replace(/^\[[^\]]+\]$/g, "");
     }
 }
