@@ -1,4 +1,4 @@
-import Genius from "./dist";
+import Genius from "./lib";
 import util from "util";
 
 const token =

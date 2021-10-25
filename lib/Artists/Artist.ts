@@ -57,7 +57,7 @@ export class Artist {
         }
 
         if (typeof options !== "object") {
-            throw new Error("Options must be an object");
+            throw new Error("'options' must be a type of 'object'");
         }
 
         const per_page = options.per_page ?? 20;

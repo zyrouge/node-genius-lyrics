@@ -51,7 +51,7 @@ export class Song {
      */
     async lyrics(removeChorus: boolean = false) {
         if (typeof removeChorus !== "boolean") {
-            throw new Error("Invalid 'removeChorus' type");
+            throw new Error("'removeChorus' must be a type of 'boolean'");
         }
 
         const { body } = await got.get(this.url, {
@@ -72,14 +72,14 @@ export class Song {
                     .map((x) => {
                         const ele = $(x as any);
                         ele.find("br").replaceWith("\n");
-                        return `${ele.text().trim()}\n`;
+                        return ele.text().trim();
                     })
-                    .join("\n")
+                    .join("\n\n")
                     .trim(),
         ];
 
         for (const x of selectors) {
-            let lyrics = x();
+            const lyrics = x();
             if (lyrics?.length) {
                 return removeChorus ? this.removeChorus(lyrics) : lyrics;
             }
