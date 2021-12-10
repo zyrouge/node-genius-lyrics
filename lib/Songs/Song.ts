@@ -100,11 +100,11 @@ export class Song {
         const data = await this.client.api.get(`/songs/${this.id}`);
         const parsed = JSON.parse(data);
 
-        this.album = parsed.song.album
-            ? new Album(parsed.song.album, this.artist)
+        this.album = parsed.response.song.album
+            ? new Album(parsed.response.song.album, this.artist)
             : undefined;
-        this.releasedAt = parsed.song.release_date
-            ? new Date(parsed.song.release_date)
+        this.releasedAt = parsed.response.song.release_date
+            ? new Date(parsed.response.song.release_date)
             : undefined;
         this.partial = false;
 
