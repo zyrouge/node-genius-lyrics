@@ -1,4 +1,4 @@
-const { writeFile } = require("fs/promises");
+const { promises: { writeFile } } = require("fs");
 const { join } = require("path");
 
 const URL = "genius-lyrics.js.org";

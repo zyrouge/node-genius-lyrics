@@ -1,4 +1,4 @@
-const { rm } = require("fs/promises");
+const { promises: { rm } } = require("fs");
 const { join } = require("path");
 
 const start = async () => {
@@ -11,8 +11,7 @@ const start = async () => {
     });
 
     console.log(
-        `Deleted previous build files from ${buildDir} in ${
-            Date.now() - startTime
+        `Deleted previous build files from ${buildDir} in ${Date.now() - startTime
         }ms!`
     );
 };
