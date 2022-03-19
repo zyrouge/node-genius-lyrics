@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/genius-lyrics)](https://npmjs.com/package/genius-lyrics)
 [![npm](https://img.shields.io/npm/dw/genius-lyrics)](https://npmjs.com/package/genius-lyrics)
 [![npm](https://img.shields.io/npm/l/genius-lyrics)](https://npmjs.com/package/genius-lyrics)
-[![Documentation](https://github.com/zyrouge/genius-lyrics/actions/workflows/docs.yml/badge.svg?branch=master)](https://github.com/zyrouge/genius-lyrics/actions/workflows/docs.yml)
+[![Documentation](https://github.com/zyrouge/node-genius-lyrics/actions/workflows/docs.yml/badge.svg?branch=master)](https://github.com/zyrouge/node-genius-lyrics/actions/workflows/docs.yml)
 
 ## 🤔 Whats is this?
 
@@ -26,7 +26,7 @@ const Client = new Genius.Client("top-secret-optional-key");
 
 -   [Documentation](https://genius-lyrics.js.org/)
 -   [NPM](https://npmjs.com/genius-lyrics)
--   [GitHub](https://github.com/zyrouge/genius-lyrics)
+-   [GitHub](https://github.com/zyrouge/node-genius-lyrics)
 
 ## ✏️ Examples
 
