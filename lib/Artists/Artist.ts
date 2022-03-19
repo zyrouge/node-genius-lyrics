@@ -1,6 +1,22 @@
-import { Client } from "../Client";
-import { Song } from "../Songs/Song";
-import { Constants } from "../Constants";
+import { Client } from "../client";
+import { Song } from "../songs/song";
+import { InvalidTypeError, RequiresGeniusKeyError } from "../errors";
+import {
+    isNumber,
+    isObject,
+    isString,
+    isUndefined,
+    joinTypes,
+} from "../helpers/types";
+
+export const ArtistSorts = ["title", "popularity"] as const;
+export type IArtistSorts = typeof ArtistSorts[number];
+
+export interface IArtistGetSongsOptions {
+    sort: IArtistSorts;
+    page: number;
+    perPage: number;
+}
 
 export class Artist {
     name: string;
@@ -17,7 +33,7 @@ export class Artist {
         facebook?: string;
         twitter?: string;
     };
-    raw: any;
+    _raw: any;
 
     constructor(
         public readonly client: Client,
@@ -25,50 +41,67 @@ export class Artist {
         public partial: boolean = false
     ) {
         this.name = res.name;
-        this.id = +res.id;
+        this.id = parseInt(res.id);
         this.url = res.url;
         this.thumbnail = res.image_url;
         this.image = res.header_image_url;
-        this.iq = +res.iq ?? 0;
+        this.iq = parseInt(res.iq) ?? 0;
         this.verified = {
             normal: res.is_verified,
             meme: res.is_meme_verified,
         };
         this.socialmedia = {
-            facebook: res.facebook_name || undefined,
-            twitter: res.twitter_name || undefined,
+            facebook: res.facebook_name ?? undefined,
+            twitter: res.twitter_name ?? undefined,
         };
-        this.raw = res;
+        this._raw = res;
     }
 
     /**
      * Fetches the songs of the Artist (Requires Key)
      * @example const Songs = await Artist.songs();
      */
-    async songs(
-        options: {
-            sort?: string;
-            page?: number;
-            per_page?: number;
-        } = {}
-    ) {
-        if (!this.client.key) {
-            throw new Error(Constants.REQUIRES_KEY);
+    async songs(options: Partial<IArtistGetSongsOptions> = {}) {
+        if (!isString(this.client.key)) {
+            throw new RequiresGeniusKeyError();
         }
 
-        if (typeof options !== "object") {
-            throw new Error("'options' must be a type of 'object'");
+        if (!isObject(options)) {
+            throw new InvalidTypeError("options", "object", typeof options);
         }
 
-        const per_page = options.per_page ?? 20;
-        const sort =
-            options.sort && Constants.ARTIST_SORTS.includes(options.sort)
-                ? options.sort
-                : "title";
-        const page = options.page ?? 1;
+        if (!isUndefined(options.sort) && !ArtistSorts.includes(options.sort)) {
+            throw new InvalidTypeError(
+                "options.sort",
+                joinTypes(...ArtistSorts),
+                typeof options.sort
+            );
+        }
+
+        if (!isUndefined(options.page) && !isNumber(options.page)) {
+            throw new InvalidTypeError(
+                "options.page",
+                joinTypes("number", "undefined"),
+                typeof options.page
+            );
+        }
+
+        if (!isUndefined(options.page) && !isNumber(options.page)) {
+            throw new InvalidTypeError(
+                "options.perPage",
+                joinTypes("number", "undefined"),
+                typeof options.perPage
+            );
+        }
+
+        const nOptions: IArtistGetSongsOptions = {
+            sort: options.sort ?? "title",
+            page: options.page ?? 1,
+            perPage: options.perPage ?? 20,
+        };
 
         const data = await this.client.api.get(
-            `/songs?page=${page}&per_page=${per_page}&sort=${sort}`
+            `/songs?page=${nOptions.page}&per_page=${nOptions.perPage}&sort=${nOptions.sort}`
         );
         const parsed = JSON.parse(data);
 
@@ -80,8 +113,8 @@ export class Artist {
      * @example const NewArtist = await Artist.fetch();
      */
     async fetch() {
-        if (!this.client.key) {
-            throw new Error(Constants.REQUIRES_KEY);
+        if (!isString(this.client.key)) {
+            throw new RequiresGeniusKeyError();
         }
 
         const data = await this.client.api.get(`/artists/${this.id}`);
@@ -89,7 +122,7 @@ export class Artist {
 
         this.socialmedia.facebook = parsed.artist.facebook_name;
         this.socialmedia.twitter = parsed.artist.twitter_name;
-        this.raw = parsed.artist;
+        this._raw = parsed.artist;
         this.partial = false;
 
         return new Artist(this.client, parsed.artist, false);

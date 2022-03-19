@@ -1,6 +1,7 @@
-import { Client } from "../Client";
-import { Artist } from "./Artist";
-import { Constants } from "../Constants";
+import { Client } from "../client";
+import { Artist } from "./artist";
+import { InvalidTypeError, RequiresGeniusKeyError } from "../errors";
+import { isNumber, isString } from "../helpers/types";
 
 export class ArtistsClient {
     /**
@@ -13,12 +14,12 @@ export class ArtistsClient {
      * @example const Artist = await ArtistsClient.get(456537);
      */
     async get(id: number) {
-        if (typeof id !== "number") {
-            throw new Error("'id' must be a type of 'number'");
+        if (!isString(this.client.key)) {
+            throw new RequiresGeniusKeyError();
         }
 
-        if (!this.client.key) {
-            throw new Error(Constants.REQUIRES_KEY);
+        if (!isNumber(id)) {
+            throw new InvalidTypeError("id", "number", typeof id);
         }
 
         const data = await this.client.api.get(`/artists/${id}`);

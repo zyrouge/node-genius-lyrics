@@ -1,9 +1,15 @@
 import got from "got";
-import cheerio from "cheerio";
-import { Client } from "../Client";
-import { Album } from "../Albums/Album";
-import { Artist } from "../Artists/Artist";
-import { Constants } from "../Constants";
+import * as cheerio from "cheerio";
+import { Client } from "../client";
+import { Album } from "../albums/album";
+import { Artist } from "../artists/artist";
+import { Constants } from "../helpers/constants";
+import {
+    InvalidTypeError,
+    NoResultError,
+    RequiresGeniusKeyError,
+} from "../errors";
+import { isBoolean, isString } from "../helpers/types";
 
 export class Song {
     title: string;
@@ -17,7 +23,7 @@ export class Song {
     artist: Artist;
     album?: Album;
     releasedAt?: Date;
-    raw: any;
+    _raw: any;
 
     constructor(
         public readonly client: Client,
@@ -27,7 +33,7 @@ export class Song {
         this.title = res.title;
         this.fullTitle = res.full_title;
         this.featuredTitle = res.title_with_featured;
-        this.id = +res.id;
+        this.id = parseInt(res.id);
         this.thumbnail = res.header_image_thumbnail_url;
         this.image = res.header_image_url;
         this.url = res.url;
@@ -42,7 +48,7 @@ export class Song {
             !this.partial && res.release_date
                 ? new Date(res.release_date)
                 : undefined;
-        this.raw = res;
+        this._raw = res;
     }
 
     /**
@@ -50,14 +56,18 @@ export class Song {
      * @example const Lyrics = await Song.lyrics(true);
      */
     async lyrics(removeChorus: boolean = false) {
-        if (typeof removeChorus !== "boolean") {
-            throw new Error("'removeChorus' must be a type of 'boolean'");
+        if (!isBoolean(removeChorus)) {
+            throw new InvalidTypeError(
+                "removeChorus",
+                "boolean",
+                typeof removeChorus
+            );
         }
 
         const { body } = await got.get(this.url, {
             ...this.client.config.requestOptions,
             headers: {
-                "User-Agent": Constants.DEF_USER_AGENT,
+                "User-Agent": Constants.defaultUserAgent,
                 ...this.client.config.requestOptions?.headers,
             },
         });
@@ -85,7 +95,7 @@ export class Song {
             }
         }
 
-        throw new Error(Constants.NO_RESULT);
+        throw new NoResultError();
     }
 
     /**
@@ -93,8 +103,8 @@ export class Song {
      * @example const NewSong = await Song.fetch();
      */
     async fetch() {
-        if (!this.client.key) {
-            throw new Error(Constants.REQUIRES_KEY);
+        if (!isString(this.client.key)) {
+            throw new RequiresGeniusKeyError();
         }
 
         const data = await this.client.api.get(`/songs/${this.id}`);

@@ -1,8 +1,12 @@
 import got, { OptionsOfTextResponseBody, RequestError } from "got";
-import { Constants } from "./Constants";
+import {
+    InvalidGeniusKeyError,
+    NoResultError,
+    WithMessageError,
+} from "../errors";
 
 /**
- * Refer [got.Options](https://www.npmjs.com/package/got) for documentation of `OptionsOfTextResponseBody`
+ * Refer [got.Options](https://www.npmjs.com/package/got) for documentation of `OptionsOfTextResponseBody`.
  */
 export class Requester {
     constructor(
@@ -31,17 +35,15 @@ export class Requester {
             if (err.response) {
                 switch (err.response.statusCode) {
                     case 401:
-                        return new Error(Constants.INV_TOKEN);
+                        return new InvalidGeniusKeyError();
 
                     case 404:
-                        return new Error(Constants.NO_RESULT);
+                        return new NoResultError();
 
                     default:
-                        return new Error(
-                            Constants.ERR_W_MSG(
-                                err.response.statusCode,
-                                err.response.statusMessage ?? "-"
-                            )
+                        return new WithMessageError(
+                            err.response.statusCode,
+                            err.response.statusMessage ?? "-"
                         );
                 }
             }

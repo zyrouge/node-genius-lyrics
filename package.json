@@ -1,6 +1,6 @@
 {
     "name": "genius-lyrics",
-    "version": "4.3.5",
+    "version": "4.3.6",
     "description": "Fetches Lyrics from Genius at Ease.",
     "main": "./dist/index.js",
     "files": [
@@ -11,14 +11,11 @@
         "docs": "typedoc && node ./scripts/docs",
         "test": "ava --verbose"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/zyrouge/genius-lyrics.git"
-    },
+    "repository": "https://github.com/zyrouge/node-genius-lyrics.git",
     "author": "ZYROUGE",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/zyrouge/genius-lyrics/issues"
+        "url": "https://github.com/zyrouge/node-genius-lyrics/issues"
     },
     "homepage": "https://genius-lyrics.js.org",
     "dependencies": {

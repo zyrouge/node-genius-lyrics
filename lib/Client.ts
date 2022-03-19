@@ -1,8 +1,10 @@
-import { Config, Constants } from "./Constants";
-import { checkConfig } from "./Utils";
-import { Requester } from "./Requester";
-import { ArtistsClient } from "./Artists/Client";
-import { SongsClient } from "./Songs/Client";
+import { Constants } from "./helpers/constants";
+import { Requester } from "./helpers/requester";
+import { ArtistsClient } from "./artists/client";
+import { SongsClient } from "./songs/client";
+import { Config, isValidConfig } from "./helpers/config";
+import { InvalidTypeError } from "./errors";
+import { isString, isUndefined, joinTypes } from "./helpers/types";
 
 export class Client {
     songs: SongsClient;
@@ -13,22 +15,26 @@ export class Client {
         public readonly key?: string,
         public readonly config: Config = {}
     ) {
-        if (!["string", "undefined"].includes(typeof key)) {
-            throw new Error(Constants.INV_TOKEN);
+        if (!isUndefined(key) && !isString(key)) {
+            throw new InvalidTypeError(
+                "key",
+                joinTypes("string", "undefined"),
+                typeof key
+            );
         }
 
-        if (!checkConfig(config)) {
-            throw new Error(Constants.INV_CONFIG_OBJ);
+        if (!isValidConfig(config)) {
+            throw new InvalidTypeError("config", "Config", typeof config);
         }
 
         this.songs = new SongsClient(this);
         this.artists = new ArtistsClient(this);
 
         this.api = new Requester(
-            this.config.origin?.api || Constants.BASE_URL,
+            this.config.origin?.api || Constants.officialApiURL,
             {
                 headers: {
-                    "User-Agent": Constants.DEF_USER_AGENT,
+                    "User-Agent": Constants.defaultUserAgent,
                     Authorization: `Bearer ${this.key}`,
                 },
             }
