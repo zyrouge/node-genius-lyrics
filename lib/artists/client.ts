@@ -13,7 +13,7 @@ export class ArtistsClient {
      * Fetches the Artist using the provided ID (Requires Key)
      * @example const Artist = await ArtistsClient.get(456537);
      */
-    async get(id: number) {
+    async get(id: number): Promise<Artist> {
         if (!isString(this.client.key)) {
             throw new RequiresGeniusKeyError();
         }

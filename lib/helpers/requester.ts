@@ -14,7 +14,10 @@ export class Requester {
         public readonly options: OptionsOfTextResponseBody
     ) {}
 
-    async get(route: string, headers?: Record<string, string>) {
+    async get(
+        route: string,
+        headers?: Record<string, string>
+    ): Promise<string> {
         try {
             const { body } = await got.get(`${this.url}${route}`, {
                 ...this.options,

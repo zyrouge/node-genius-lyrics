@@ -55,7 +55,7 @@ export class Song {
      * Fetches Lyrics of the Track
      * @example const Lyrics = await Song.lyrics(true);
      */
-    async lyrics(removeChorus: boolean = false) {
+    async lyrics(removeChorus: boolean = false): Promise<string> {
         if (!isBoolean(removeChorus)) {
             throw new InvalidTypeError(
                 "removeChorus",
@@ -102,7 +102,7 @@ export class Song {
      * Fetches All Information about the Track and updates all the existing Properties (Requires Key)
      * @example const NewSong = await Song.fetch();
      */
-    async fetch() {
+    async fetch(): Promise<Song> {
         if (!isString(this.client.key)) {
             throw new RequiresGeniusKeyError();
         }
@@ -121,7 +121,7 @@ export class Song {
         return this;
     }
 
-    removeChorus(lyrics: string) {
+    removeChorus(lyrics: string): string {
         return lyrics.replace(/^\[[^\]]+\]$/g, "");
     }
 }

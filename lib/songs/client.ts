@@ -23,7 +23,10 @@ export class SongsClient {
      * Searches for songs for the provided query (Key is optional)
      * @example const SearchResults = await SongsClient.search("faded");
      */
-    async search(query: string, options?: Partial<SongSearchOptions>) {
+    async search(
+        query: string,
+        options?: Partial<SongSearchOptions>
+    ): Promise<Song[]> {
         if (!isString(query)) {
             throw new InvalidTypeError("query", "string", typeof query);
         }
@@ -80,7 +83,7 @@ export class SongsClient {
      * Fetches the Song using the provided ID (Requires Key)
      * @example const Song = await SongsClient.get(3276244);
      */
-    async get(id: number) {
+    async get(id: number): Promise<Song> {
         if (!isString(this.client.key)) {
             throw new RequiresGeniusKeyError();
         }
@@ -96,7 +99,7 @@ export class SongsClient {
     }
 
     // Source: https://github.com/farshed/genius-lyrics-api/blob/110397a9f05fe20c4ded92418430f665f074c4e4/lib/utils/index.js#L15
-    sanitizeQuery(query: string) {
+    sanitizeQuery(query: string): string {
         return query
             .toLowerCase()
             .replace(/ *\([^)]*\) */g, "")

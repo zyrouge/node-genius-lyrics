@@ -116,7 +116,7 @@ export class Artist {
      * Fetches All Information about the Artist and updates all the existing Properties (Requires Key)
      * @example const NewArtist = await Artist.fetch();
      */
-    async fetch() {
+    async fetch(): Promise<Artist> {
         if (!isString(this.client.key)) {
             throw new RequiresGeniusKeyError();
         }
