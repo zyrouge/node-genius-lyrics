@@ -61,7 +61,9 @@ export class Artist {
      * Fetches the songs of the Artist (Requires Key)
      * @example const Songs = await Artist.songs();
      */
-    async songs(options: Partial<IArtistGetSongsOptions> = {}) {
+    async songs(
+        options: Partial<IArtistGetSongsOptions> = {}
+    ): Promise<Song[]> {
         if (!isString(this.client.key)) {
             throw new RequiresGeniusKeyError();
         }
@@ -101,11 +103,13 @@ export class Artist {
         };
 
         const data = await this.client.api.get(
-            `/songs?page=${nOptions.page}&per_page=${nOptions.perPage}&sort=${nOptions.sort}`
+            `/artists/${this.id}/songs?page=${nOptions.page}&per_page=${nOptions.perPage}&sort=${nOptions.sort}`
         );
         const parsed = JSON.parse(data);
 
-        return parsed.songs.map((s: any) => new Song(this.client, s, true));
+        return parsed.response.songs.map(
+            (s: any) => new Song(this.client, s, true)
+        );
     }
 
     /**
