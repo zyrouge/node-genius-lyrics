@@ -1,8 +1,8 @@
-import { OptionsOfTextResponseBody } from "got";
+import { MethodlessRequestOptions } from "./http";
 import { isObject, isString, isUndefined } from "./types";
 
 export interface Config {
-    requestOptions?: Omit<OptionsOfTextResponseBody, "responseType">;
+    requestOptions?: MethodlessRequestOptions;
     origin?: {
         api?: string;
         url?: string;

@@ -1,4 +1,4 @@
-import got from "got";
+import { request } from "../helpers/http";
 import * as cheerio from "cheerio";
 import { Client } from "../client";
 import { Album } from "../albums/album";
@@ -23,6 +23,7 @@ export class Song {
     artist: Artist;
     album?: Album;
     releasedAt?: Date;
+    instrumental: boolean;
     _raw: any;
 
     constructor(
@@ -48,6 +49,7 @@ export class Song {
             !this.partial && res.release_date
                 ? new Date(res.release_date)
                 : undefined;
+        this.instrumental = res.instrumental;
         this._raw = res;
     }
 
@@ -64,7 +66,7 @@ export class Song {
             );
         }
 
-        const { body } = await got.get(this.url, {
+        const { body } = await request(this.url, {
             ...this.client.config.requestOptions,
             headers: {
                 "User-Agent": Constants.defaultUserAgent,
@@ -72,7 +74,7 @@ export class Song {
             },
         });
 
-        const $ = cheerio.load(body);
+        const $ = cheerio.load(await body.text());
 
         const selectors: (() => string | undefined)[] = [
             () => $(".lyrics").text().trim(),

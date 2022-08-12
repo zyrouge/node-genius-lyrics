@@ -1,4 +1,4 @@
-import got from "got";
+import { request } from "../helpers/http";
 import { Client } from "../";
 import { Song } from "./song";
 import { Constants } from "../helpers/constants";
@@ -43,13 +43,12 @@ export class SongsClient {
         if (isString(this.client.key)) {
             const data = await this.client.api.get(`/search?q=${encodedQuery}`);
             const parsed = JSON.parse(data);
-
             result = parsed.response.hits;
         } else {
-            const res = await got.get(
+            const res = await request(
                 `${
                     this.client.config.origin?.url || Constants.unofficialApiURL
-                }/search/multi?per_page=5&q=${encodedQuery}`,
+                }/search/song?per_page=5&q=${encodedQuery}`,
                 {
                     ...this.client.config.requestOptions,
                     headers: {
@@ -58,20 +57,16 @@ export class SongsClient {
                     },
                 }
             );
-            const parsed = JSON.parse(res.body);
 
+            const parsed = JSON.parse(await res.body.text());
             if (!parsed?.response?.sections) {
                 throw new NoResultError();
             }
 
-            const __hits = parsed.response.sections.find(
-                (s: any) => s.type === "song"
+            result = parsed.response.sections.reduce(
+                (pv: any[], x: any) => [...pv, ...x.hits],
+                []
             );
-            if (!__hits?.hits?.length) {
-                throw new NoResultError();
-            }
-
-            result = __hits.hits;
         }
 
         return result
@@ -104,7 +99,7 @@ export class SongsClient {
             .toLowerCase()
             .replace(/ *\([^)]*\) */g, "")
             .replace(/ *\[[^\]]*]/, "")
-            .replace(/feat.|ft./g, "")
+            .replace(/feat\.|ft\./g, "")
             .replace(/\s+/g, " ")
             .trim();
     }

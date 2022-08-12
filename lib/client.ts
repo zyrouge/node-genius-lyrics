@@ -1,5 +1,5 @@
 import { Constants } from "./helpers/constants";
-import { Requester } from "./helpers/requester";
+import { ApiClient } from "./api";
 import { ArtistsClient } from "./artists/client";
 import { SongsClient } from "./songs/client";
 import { Config, isValidConfig } from "./helpers/config";
@@ -9,7 +9,7 @@ import { isString, isUndefined, joinTypes } from "./helpers/types";
 export class Client {
     songs: SongsClient;
     artists: ArtistsClient;
-    api: Requester;
+    api: ApiClient;
 
     constructor(
         public readonly key?: string,
@@ -30,7 +30,7 @@ export class Client {
         this.songs = new SongsClient(this);
         this.artists = new ArtistsClient(this);
 
-        this.api = new Requester(
+        this.api = new ApiClient(
             this.config.origin?.api || Constants.officialApiURL,
             {
                 headers: {
