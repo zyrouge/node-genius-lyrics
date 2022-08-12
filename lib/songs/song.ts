@@ -84,9 +84,9 @@ export class Song {
                     .map((x) => {
                         const ele = $(x as any);
                         ele.find("br").replaceWith("\n");
-                        return ele.text().trim();
+                        return ele.text();
                     })
-                    .join("\n\n")
+                    .join("\n")
                     .trim(),
         ];
 
