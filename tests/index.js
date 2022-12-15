@@ -8,7 +8,8 @@ const __token__ =
 const wait = util.promisify(setTimeout);
 
 module.exports = {
-    Client: new Genius.Client(__token__),
+    AuthorizedClient: new Genius.Client(__token__),
+    UnauthorizedClient: new Genius.Client(),
     wait: {
         _: wait,
         default: () => wait(2000),
@@ -16,5 +17,6 @@ module.exports = {
 };
 
 test("Genius Client", (t) => {
-    t.true(module.exports.Client instanceof Genius.Client);
+    t.true(module.exports.AuthorizedClient instanceof Genius.Client);
+    t.true(module.exports.UnauthorizedClient instanceof Genius.Client);
 });

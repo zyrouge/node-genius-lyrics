@@ -1,11 +1,20 @@
 const test = require("ava");
-const { Client, wait } = require("..");
+const { AuthorizedClient, UnauthorizedClient, wait } = require("..");
 
-test("Song Client - Search", async (t) => {
-    const [song] = await Client.songs.search("faded");
+test("[Authorized] Song Client - Search & Fetch", async (t) => {
+    const [song] = await AuthorizedClient.songs.search("faded");
     t.true(song.partial);
     await wait.default();
 
     await song.fetch();
     t.false(song.partial);
+});
+
+test("[Unauthorized] Song Client - Search & Lyrics", async (t) => {
+    const [song] = await UnauthorizedClient.songs.search("faded");
+    t.true(song.partial);
+    await wait.default();
+
+    const lyrics = await song.lyrics();
+    t.true(typeof lyrics === "string" && lyrics.length > 0);
 });

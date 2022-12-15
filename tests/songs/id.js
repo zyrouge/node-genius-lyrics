@@ -1,10 +1,10 @@
 const test = require("ava");
-const { Client, wait } = require("..");
+const { AuthorizedClient, wait } = require("..");
 
 const id = 456537;
 
-test("Song Client - ID & Lyrics", async (t) => {
-    const song = await Client.songs.get(id);
+test("[Authorized] Song Client - ID & Lyrics", async (t) => {
+    const song = await AuthorizedClient.songs.get(id);
     t.is(song.id, id);
     await wait.default();
 
