@@ -1,4 +1,3 @@
-const test = require("ava");
 const Genius = require("../dist");
 const util = require("util");
 
@@ -15,8 +14,3 @@ module.exports = {
         default: () => wait(2000),
     },
 };
-
-test("Genius Client", (t) => {
-    t.true(module.exports.AuthorizedClient instanceof Genius.Client);
-    t.true(module.exports.UnauthorizedClient instanceof Genius.Client);
-});
