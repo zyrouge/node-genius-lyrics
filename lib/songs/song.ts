@@ -124,6 +124,6 @@ export class Song {
     }
 
     removeChorus(lyrics: string): string {
-        return lyrics.replace(/^\[[^\]]+\]$/g, "");
+        return lyrics.replace(/\[[^\]]+\]\n?/g, "");
     }
 }
