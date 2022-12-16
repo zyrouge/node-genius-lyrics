@@ -2,12 +2,9 @@ import { request, errors, MethodlessRequestOptions } from "./helpers/http";
 import {
     InvalidGeniusKeyError,
     NoResultError,
-    WithMessageError,
+    UnexpectedResponseError,
 } from "./errors";
 
-/**
- * Refer [got.Options](https://www.npmjs.com/package/got) for documentation of `OptionsOfTextResponseBody`.
- */
 export class ApiClient {
     constructor(
         public readonly url: string,
@@ -25,6 +22,7 @@ export class ApiClient {
                     ...headers,
                     ...this.options?.headers,
                 },
+                throwOnError: true,
             });
 
             return body.text();
@@ -33,9 +31,9 @@ export class ApiClient {
         }
     }
 
-    _handleError(err: unknown) {
-        if (err instanceof errors.ResponseStatusCodeError) {
-            switch (err.statusCode) {
+    _handleError(error: unknown) {
+        if (error instanceof errors.ResponseStatusCodeError) {
+            switch (error.statusCode) {
                 case 401:
                     return new InvalidGeniusKeyError();
 
@@ -43,13 +41,10 @@ export class ApiClient {
                     return new NoResultError();
 
                 default:
-                    return new WithMessageError(
-                        err.statusCode,
-                        err.message ?? "-"
-                    );
+                    return new UnexpectedResponseError(error);
             }
         }
 
-        return err;
+        return error;
     }
 }
