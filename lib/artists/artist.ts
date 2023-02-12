@@ -43,8 +43,8 @@ export class Artist {
         this.name = res.name;
         this.id = parseInt(res.id);
         this.url = res.url;
-        this.thumbnail = res.image_url;
-        this.image = res.header_image_url;
+        this.thumbnail = res.header_image_url;
+        this.image = res.image_url;
         this.iq = parseInt(res.iq) ?? 0;
         this.verified = {
             normal: res.is_verified,
