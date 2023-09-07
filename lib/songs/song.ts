@@ -1,5 +1,5 @@
 import { request } from "../helpers/http";
-import * as cheerio from "cheerio";
+import html from "node-html-parser";
 import { Client } from "../client";
 import { Album } from "../albums/album";
 import { Artist } from "../artists/artist";
@@ -74,30 +74,25 @@ export class Song {
             },
         });
 
-        const $ = cheerio.load(await body.text());
+        const document = html(await body.text());
+        const lyricsRoot = document.getElementById("lyrics-root");
 
-        const selectors: (() => string | undefined)[] = [
-            () => $(".lyrics").text().trim(),
-            () =>
-                $("div[class*='Lyrics__Container']")
-                    .toArray()
-                    .map((x) => {
-                        const ele = $(x as any);
-                        ele.find("br").replaceWith("\n");
-                        return ele.text();
-                    })
-                    .join("\n")
-                    .trim(),
-        ];
+        const lyrics = lyricsRoot
+            .querySelectorAll("[data-lyrics-container='true']")
+            .map((x) => {
+                x.querySelectorAll("br").forEach((y) => {
+                    y.replaceWith(new html.TextNode("\n"));
+                });
+                return x.text;
+            })
+            .join("\n")
+            .trim();
 
-        for (const x of selectors) {
-            const lyrics = x();
-            if (lyrics?.length) {
-                return removeChorus ? this.removeChorus(lyrics) : lyrics;
-            }
+        if (!lyrics?.length) {
+            throw new NoResultError();
         }
 
-        throw new NoResultError();
+        return removeChorus ? this.removeChorus(lyrics) : lyrics;
     }
 
     /**
