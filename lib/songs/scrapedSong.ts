@@ -938,7 +938,7 @@ export class ScrapedSong {
         for (const x of children) {
             if (typeof x === "string") {
                 lyrics += x;
-            } else if (x.tag === "br") {
+            } else if (x.tag === "br" || x.tag === "inread-ad") {
                 lyrics += "\n";
             } else if (x.children) {
                 lyrics += this.parseLyricsDataBodyChildren(x.children);
