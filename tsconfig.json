@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "ES2021",
         "module": "commonjs",
         "declaration": true,
         "outDir": "./dist",
@@ -10,6 +10,7 @@
         "strictNullChecks": true,
         "strictFunctionTypes": true,
         "strictPropertyInitialization": true,
+        "noUncheckedIndexedAccess": true,
         "noImplicitThis": true,
         "alwaysStrict": true,
         "noUnusedLocals": true,

@@ -10,7 +10,7 @@ export class ArtistsClient {
     constructor(public readonly client: Client) {}
 
     /**
-     * Fetches the Artist using the provided ID (Requires Key)
+     * Fetches the artist using the provided ID (requires key).
      * @example const Artist = await ArtistsClient.get(456537);
      */
     async get(id: number): Promise<Artist> {

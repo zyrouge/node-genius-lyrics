@@ -5,21 +5,23 @@ import {
     UnexpectedResponseError,
 } from "./errors";
 
-export class ApiClient {
+export class RequestClient {
     constructor(
-        public readonly url: string,
+        public readonly base?: string,
         public readonly options?: MethodlessRequestOptions
     ) {}
 
     async get(
         route: string,
-        headers?: Record<string, string>
+        options?: MethodlessRequestOptions
     ): Promise<string> {
+        const url = this.base ? `${this.base}${route}` : route;
         try {
-            const { body } = await request(`${this.url}${route}`, {
+            const { body } = await request(url, {
                 ...this.options,
+                ...options,
                 headers: {
-                    ...headers,
+                    ...options?.headers,
                     ...this.options?.headers,
                 },
                 throwOnError: true,

@@ -1,8 +1,7 @@
 export * from "./client";
-export * from "./songs/client";
-export * from "./artists/client";
-export * from "./songs/song";
-export * from "./artists/artist";
-export * from "./albums/album";
+export * from "./albums";
+export * from "./artists";
+export * from "./errors";
+export * from "./songs";
 
 export const { version } = require("../package.json");

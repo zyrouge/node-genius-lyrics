@@ -10,7 +10,7 @@ import {
 } from "../helpers/types";
 
 export const ArtistSorts = ["title", "popularity"] as const;
-export type IArtistSorts = typeof ArtistSorts[number];
+export type IArtistSorts = (typeof ArtistSorts)[number];
 
 export interface IArtistGetSongsOptions {
     sort: IArtistSorts;
@@ -58,7 +58,7 @@ export class Artist {
     }
 
     /**
-     * Fetches the songs of the Artist (Requires Key)
+     * Fetches the songs of the artist (requires key).
      * @example const Songs = await Artist.songs();
      */
     async songs(
@@ -113,7 +113,7 @@ export class Artist {
     }
 
     /**
-     * Fetches All Information about the Artist and updates all the existing Properties (Requires Key)
+     * Fetches all information about the artist and updates all the existing properties (requires key).
      * @example const NewArtist = await Artist.fetch();
      */
     async fetch(): Promise<Artist> {

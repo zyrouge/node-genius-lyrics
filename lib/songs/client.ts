@@ -6,8 +6,11 @@ import {
     InvalidTypeError,
     NoResultError,
     RequiresGeniusKeyError,
+    UnableToScrapeDataError,
 } from "../errors";
 import { isNumber, isString } from "../helpers/types";
+import { contentBetween, unescapeJsonEscaped } from "../utils";
+import { ScrapedSong, ScrapedSongData } from "./scrapedSong";
 
 export interface SongSearchOptions {
     sanitizeQuery: boolean;
@@ -20,7 +23,7 @@ export class SongsClient {
     constructor(public readonly client: Client) {}
 
     /**
-     * Searches for songs for the provided query (Key is optional)
+     * Searches for songs for the provided query.
      * @example const SearchResults = await SongsClient.search("faded");
      */
     async search(
@@ -36,7 +39,7 @@ export class SongsClient {
         };
 
         const encodedQuery = encodeURIComponent(
-            nOptions.sanitizeQuery ? this.sanitizeQuery(query) : query
+            nOptions.sanitizeQuery ? SongsClient.sanitizeQuery(query) : query
         );
 
         let result: any[] = [];
@@ -75,7 +78,7 @@ export class SongsClient {
     }
 
     /**
-     * Fetches the Song using the provided ID (Requires Key)
+     * Fetches the song using the provided ID (requires key).
      * @example const Song = await SongsClient.get(3276244);
      */
     async get(id: number): Promise<Song> {
@@ -93,8 +96,28 @@ export class SongsClient {
         return new Song(this.client, parsed.response.song, false);
     }
 
+    /**
+     * Scrapes the song page for data.
+     * @example const ScrapedSong = await SongsClient.scape("https://genius.com/Alan-walker-faded-lyrics");
+     */
+    async scrape(url: string): Promise<ScrapedSong> {
+        const body = await this.client.request.get(url);
+
+        const raw = contentBetween(
+            body,
+            "window.__PRELOADED_STATE__ = JSON.parse('",
+            "');"
+        );
+        if (!raw) {
+            throw new UnableToScrapeDataError();
+        }
+
+        const data = JSON.parse(unescapeJsonEscaped(raw)) as ScrapedSongData;
+        return new ScrapedSong(data);
+    }
+
     // Source: https://github.com/farshed/genius-lyrics-api/blob/110397a9f05fe20c4ded92418430f665f074c4e4/lib/utils/index.js#L15
-    sanitizeQuery(query: string): string {
+    static sanitizeQuery(query: string): string {
         return query
             .toLowerCase()
             .replace(/ *\([^)]*\) */g, "")

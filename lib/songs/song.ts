@@ -1,9 +1,7 @@
-import { request } from "../helpers/http";
 import html from "node-html-parser";
 import { Client } from "../client";
 import { Album } from "../albums/album";
 import { Artist } from "../artists/artist";
-import { Constants } from "../helpers/constants";
 import {
     InvalidTypeError,
     NoResultError,
@@ -54,7 +52,7 @@ export class Song {
     }
 
     /**
-     * Fetches Lyrics of the Track
+     * Fetches lyrics of the track.
      * @example const Lyrics = await Song.lyrics(true);
      */
     async lyrics(removeChorus: boolean = false): Promise<string> {
@@ -66,15 +64,8 @@ export class Song {
             );
         }
 
-        const { body } = await request(this.url, {
-            ...this.client.config.requestOptions,
-            headers: {
-                "User-Agent": Constants.defaultUserAgent,
-                ...this.client.config.requestOptions?.headers,
-            },
-        });
-
-        const document = html(await body.text());
+        const body = await this.client.request.get(this.url);
+        const document = html(body);
         const lyricsRoot = document.getElementById("lyrics-root");
 
         const lyrics = lyricsRoot
@@ -92,11 +83,11 @@ export class Song {
             throw new NoResultError();
         }
 
-        return removeChorus ? this.removeChorus(lyrics) : lyrics;
+        return removeChorus ? Song.removeChorus(lyrics) : lyrics;
     }
 
     /**
-     * Fetches All Information about the Track and updates all the existing Properties (Requires Key)
+     * Fetches all information about the track and updates all the existing properties (requires key).
      * @example const NewSong = await Song.fetch();
      */
     async fetch(): Promise<Song> {
@@ -118,7 +109,7 @@ export class Song {
         return this;
     }
 
-    removeChorus(lyrics: string): string {
+    static removeChorus(lyrics: string): string {
         return lyrics.replace(/\[[^\]]+\]\n?/g, "");
     }
 }
