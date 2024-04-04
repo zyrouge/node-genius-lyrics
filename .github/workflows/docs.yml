@@ -11,22 +11,21 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
 
-            - name: Use Node.js 16.8.0
-              uses: actions/setup-node@v1
+            - uses: actions/setup-node@v4
               with:
-                  node-version: 16.8.0
+                  node-version: 20.x
                   cache: npm
 
             - name: Installing dependencies
               run: npm ci
 
-            - name: Building site
+            - name: Building documentation
               run: npm run docs
 
             - name: Deploy
-              uses: JamesIves/github-pages-deploy-action@4.1.0
+              uses: zyrouge/github-push-action@v1
               with:
                   branch: gh-pages
-                  folder: docs
+                  directory: docs
