@@ -69,7 +69,7 @@ export class Song {
         const lyricsRoot = document.getElementById("lyrics-root");
 
         const lyrics = lyricsRoot
-            .querySelectorAll("[data-lyrics-container='true']")
+            ?.querySelectorAll("[data-lyrics-container='true']")
             .map((x) => {
                 x.querySelectorAll("br").forEach((y) => {
                     y.replaceWith(new html.TextNode("\n"));
